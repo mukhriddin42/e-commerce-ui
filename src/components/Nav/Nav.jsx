@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="fixed top-0 bg-white w-full">
-      <nav className="flex items-center justify-between px-20 pb-5 border-b border-[#ECECEC]">
+      <nav className="flex items-center justify-between px-20 py-5 border-b border-[#ECECEC]">
         <Link to="/">
           <img src={logo} alt="" />
         </Link>
