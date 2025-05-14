@@ -1,8 +1,8 @@
 import React from "react";
-import home from "../assets/home.svg";
-import Welcome from "../assets/Welcome.svg";
+import home from "../assets/About/home.svg";
+import Welcome from "../assets/About/Welcome.svg";
 import FoodCarousel from "../components/FoodCarusel/FoodCarusel";
-import icon1 from "../assets/icons/icon-1.svg";
+import icon1 from "../assets/About/icon-1.svg";
 const About = () => {
   return (
     <div>
