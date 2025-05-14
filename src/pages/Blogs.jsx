@@ -34,7 +34,7 @@ const Blogs = () => {
     <div id="blogs">
       <div className="container mt-[30px] m-auto">
         <div
-          className="top container mt-[100px] w-full h-[237px] rounded-2xl p-[70px] "
+          className="top container mt-[200px] w-full h-[237px] rounded-2xl p-[70px] "
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="top-details flex flex-col lg:flex-row justify-between gap-4">
