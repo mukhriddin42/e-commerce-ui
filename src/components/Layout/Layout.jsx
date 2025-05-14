@@ -11,6 +11,7 @@ const Layout = () => {
       <Header />
       <Nav />
       <Menu />
+      <Home />
       <Outlet />
       <Footer />
     </>
