@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <>
-      <nav className="flex items-center justify-between px-20 mt-5 pb-5 border-b border-[#ECECEC]">
+    <div className="fixed top-0 bg-white w-full">
+      <nav className="flex items-center justify-between px-20 pb-5 border-b border-[#ECECEC]">
         <Link to="/">
           <img src={logo} alt="" />
         </Link>
@@ -57,7 +57,7 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 
