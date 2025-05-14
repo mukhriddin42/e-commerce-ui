@@ -14,7 +14,7 @@ const App = () => {
             <Route path="/about" element={<About />}></Route>
             <Route path="/home" element={<About />}></Route>
           </Route>
-          {/* <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<h1>home</h1>}></Route>
             <Route path="aboutus" element={<h1>About Us</h1>}></Route>
             <Route path="myaccount" element={<h1>My Account</h1>}></Route>
@@ -23,8 +23,7 @@ const App = () => {
               path="ordertracking"
               element={<h1>Order Tracking</h1>}
             ></Route>
-          </Route> */}
-          {/* teginilmasin  */}
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
