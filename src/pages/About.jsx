@@ -15,15 +15,19 @@ const About = () => {
         <li className="text-[#7E7E7E]  text-[14px]">About us</li>
       </ul>
       <hr className="text-[#ECECEC]" />
-      <div className="container mx-auto flex gap-5 justify-between mt-15 items-center">
-        <div>
-          <img src={Welcome} alt="" />
+
+      {/*  */}
+      <div className="container mx-auto flex flex-col lg:flex-row gap-10 justify-between items-center px-4 py-10">
+        <div className="w-full lg:w-1/2">
+          <img src={Welcome} alt="Welcome" className="w-full h-auto" />
         </div>
-        <div className="max-w-[645px] flex flex-col gap-5">
-          <h1 className="text-[40px] font-semibold text-[#253D4E]">
+
+        <div className="w-full lg:w-1/2 max-w-[645px] flex flex-col gap-5 mt-6 lg:mt-0">
+          <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#253D4E]">
             Welcome to Nest
           </h1>
-          <p className="text-[#7E7E7E]">
+
+          <p className="text-[#7E7E7E] text-sm md:text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad maxim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -31,9 +35,9 @@ const About = () => {
             reprehenderit in voluptate id est laborum.
           </p>
 
-          <p className="text-[#7E7E7E]">
+          <p className="text-[#7E7E7E] text-sm md:text-base">
             Ius ferri velit sanctus cu, sed at soleat accusata. Dictas prompta
-            et Ut placerat legendos interpre.Donec vitae sapien ut libero
+            et Ut placerat legendos interpre. Donec vitae sapien ut libero
             venenatis faucibus. Nullam quis ante Etiam sit amet orci eget. Quis
             commodo odio aenean sed adipiscing. Turpis massa tincidunt dui ut
             ornare lectus. Auctor elit sed vulputate mi sit amet. Commodo
@@ -44,6 +48,8 @@ const About = () => {
           <FoodCarousel />
         </div>
       </div>
+      {/*  */}
+
       <div className="container mx-auto mt-15">
         <div>
           <h1 className="text-[40px] font-semibold text-center text-[#253D4E]">
