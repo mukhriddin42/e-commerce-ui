@@ -18,15 +18,18 @@ const Blogs = () => {
     { id: 6, name: "Home", icon: "🏠" },
   ];
 
-  axios
-    .get("https://dummyjson.com/products")
-    .then((response) => {
-      console.log(response.data.products);
-      setproducts(response.data.products);
-    })
-    .catch((error) => {
-      console.error("xatolik", error);
-    }, []);
+  useEffect(()=> {
+      axios
+        .get("https://dummyjson.com/products")
+        .then((response) => {
+          console.log(response.data.products);
+          setproducts(response.data.products);
+        })
+        .catch((error) => {
+          console.error("xatolik", error);
+        });
+  },[])
+
   return (
     <div id="blogs">
       <div className="container m-auto">
@@ -52,8 +55,8 @@ const Blogs = () => {
 
         {/* beginning oi=f the main content */}
 
-        <div className="mainContent container mt-16 border-2 p-2 min-h-[100vh] grid grid-cols-[75%_25%]">
-          <div className="articles min-h-[100%] border-2 p-4">
+        <div className="mainContent container mt-16  p-2 min-h-[100vh] grid grid-cols-[75%_25%]">
+          <div className="articles min-h-[100%] p-4">
             <div className="topArticles w-full flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
               <div className="Articles_title flex items-center gap-3">
                 <div className="savatIcon w-9 h-9">
@@ -121,7 +124,7 @@ const Blogs = () => {
           {/* Articlni filter va search qismi  */}
           
 
-          <div className="articleSearch min-h-[100%] border-2 p-2">
+          <div className="articleSearch min-h-[100%] p-2">
             <label htmlFor="articleSearch">
               <div className="searching flex w-[320px] h-[64px] rounded-2xl shadow-2xl p-4 m-auto">
                 <input
