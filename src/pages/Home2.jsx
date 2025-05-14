@@ -1,10 +1,12 @@
-import React from 'react'
-import Header from '.Header.jsx'
+import React from "react";
+import Homepng from "../assets/Home/tabpanel.png";
 const Home2 = () => {
   return (
     <>
-      <Header/>
-      <h1>Salom man ishni boshladim </h1>
+      <div>
+        <p>Fresh Vegetables Big discount</p>
+        
+      </div>
     </>
   );
 };
