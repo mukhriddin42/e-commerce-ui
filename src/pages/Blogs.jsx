@@ -32,7 +32,7 @@ const Blogs = () => {
 
   return (
     <div id="blogs">
-      <div className="container m-auto">
+      <div className="container mt-[30px] m-auto">
         <div
           className="top container mt-[100px] w-full h-[237px] rounded-2xl p-[70px] "
           style={{ backgroundImage: `url(${bgImage})` }}
