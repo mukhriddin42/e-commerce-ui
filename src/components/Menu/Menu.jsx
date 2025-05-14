@@ -34,6 +34,7 @@ const Menu = () => {
           </li>
           <li className="cursor-pointer">
             <Link to="/home">Home</Link>
+            <IoIosArrowDown />
           </li>
           <li className="cursor-pointer flex items-center gap-2">
             <Link to="/about">About</Link>
