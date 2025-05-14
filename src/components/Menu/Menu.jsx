@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <nav className="px-20 flex justify-between top-[97px] py-4 fixed bg-white w-full">
+      <nav className="px-20 flex justify-between top-[97px] py-4 fixed bg-white w-full z-10">
         <ul className="flex gap-7 items-center font-semibold quicksand">
           <label
             htmlFor=""
@@ -32,8 +32,9 @@ const Menu = () => {
             <MdOutlineLocalFireDepartment className="text-[#3BB77E]" />
             Deals
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer items-center flex gap-2">
             <Link to="/home">Home</Link>
+            <IoIosArrowDown />
           </li>
           <li className="cursor-pointer flex items-center gap-2">
             <Link to="/about">About</Link>
