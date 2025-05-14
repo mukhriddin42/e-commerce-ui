@@ -32,7 +32,7 @@ const Menu = () => {
             <MdOutlineLocalFireDepartment className="text-[#3BB77E]" />
             Deals
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer items-center flex gap-2">
             <Link to="/home">Home</Link>
             <IoIosArrowDown />
           </li>
