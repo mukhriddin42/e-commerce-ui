@@ -7,7 +7,7 @@ const Header = () => {
       <header className="py-3 flex items-center justify-between px-20 border-b border-[#ECECEC]">
         <ul className="flex text-[#7E7E7E] text-[14px]">
           <li className="border-r border-[#DEDFE2] px-2 cursor-pointer">
-            <Link to="/about">About Us</Link>
+            <Link to="/aboutus">About Us</Link>
           </li>
           <li className="border-r border-[#DEDFE2] px-2 cursor-pointer">
             <Link to="/myaccount">My Account</Link>

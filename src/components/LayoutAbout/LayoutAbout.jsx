@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../Header/Header";
-import { Outlet } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import Menu from "../Menu/Menu";
+import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
-const Layout = () => {
+const LayoutAbout = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Nav />
       <Menu />
       <Outlet />
@@ -17,4 +17,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default LayoutAbout;

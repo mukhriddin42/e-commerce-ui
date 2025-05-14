@@ -3,6 +3,7 @@ import { IoGrid } from "react-icons/io5";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { SlEarphonesAlt } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -33,7 +34,7 @@ const Menu = () => {
           </li>
           <li className="cursor-pointer">Home</li>
           <li className="cursor-pointer flex items-center gap-2">
-            About
+            <Link to="/about">About</Link>
             <IoIosArrowDown />
           </li>
           <li className="cursor-pointer flex items-center gap-2">
