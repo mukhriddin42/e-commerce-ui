@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <nav className="px-20 flex justify-between fixed bg-white w-full">
+      <nav className="px-20 flex justify-between top-[97px] py-4 fixed bg-white w-full">
         <ul className="flex gap-7 items-center font-semibold quicksand">
           <label
             htmlFor=""
