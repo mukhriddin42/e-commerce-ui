@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Layout from "./components/Layout/Layout";
+import Layout from "./components/Layout/Layout";
 import LayoutAbout from "./components/LayoutAbout/LayoutAbout";
-// import About from "./pages/About";
+import About from "./pages/About";
 
 const App = () => {
   return (
@@ -23,7 +23,6 @@ const App = () => {
               path="ordertracking"
               element={<h1>Order Tracking</h1>}
             ></Route>
-            
           </Route>
         </Routes>
       </BrowserRouter>
