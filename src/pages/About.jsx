@@ -209,6 +209,7 @@ const About = () => {
           </p>
         </div>
       </div>
+
       {/*  */}
       <div className="container mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-6 px-4 py-10">
         <div className="w-full md:w-[48%] lg:w-[30%]">
@@ -273,65 +274,80 @@ const About = () => {
         </div>
       </div>
       {/*  */}
-    <div className="container mx-auto flex flex-col items-center mt-10 px-4">
-  <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#253D4E] text-center">
-    Our Team
-  </h1>
+      <div className="container mx-auto flex flex-col items-center mt-10 px-4">
+        <h1 className="text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#253D4E] text-center">
+          Our Team
+        </h1>
 
-  <div className="flex flex-col lg:flex-row gap-10 mt-10">
-    {/* Left Text Block */}
-    <div className="w-full lg:max-w-[445px] flex flex-col gap-5">
-      <p className="text-[#3BB77E]">Our Team</p>
-      <h1 className="text-xl md:text-2xl lg:text-[48px] font-semibold text-[#253D4E] leading-snug">
-        Meet Our Expert Team
-      </h1>
-      <p className="text-[#7E7E7E] text-sm md:text-base">
-        Proin ullamcorper pretium orci. Donec necscele risque leo. Nam massa
-        dolor imperdiet neccon sequata congue idsem. Maecenas malesuada faucibus
-        finibus.
-      </p>
-      <p className="text-[#7E7E7E] text-sm md:text-base">
-        Proin ullamcorper pretium orci. Donec necscele risque leo. Nam massa
-        dolor imperdiet neccon sequata congue idsem. Maecenas malesuada faucibus
-        finibus.
-      </p>
-    </div>
+        <div className="flex flex-col lg:flex-row gap-10 mt-10">
+          {/* Left Text Block */}
+          <div className="w-full lg:max-w-[445px] flex flex-col gap-5">
+            <p className="text-[#3BB77E]">Our Team</p>
+            <h1 className="text-xl md:text-2xl lg:text-[48px] font-semibold text-[#253D4E] leading-snug">
+              Meet Our Expert Team
+            </h1>
+            <p className="text-[#7E7E7E] text-sm md:text-base">
+              Proin ullamcorper pretium orci. Donec necscele risque leo. Nam
+              massa dolor imperdiet neccon sequata congue idsem. Maecenas
+              malesuada faucibus finibus.
+            </p>
+            <p className="text-[#7E7E7E] text-sm md:text-base">
+              Proin ullamcorper pretium orci. Donec necscele risque leo. Nam
+              massa dolor imperdiet neccon sequata congue idsem. Maecenas
+              malesuada faucibus finibus.
+            </p>
+          </div>
 
-    {/* Team Members */}
-    <div className="flex flex-col md:flex-row gap-20 sm:10 justify-center items-center ">
-      {/* Member 1 */}
-      <div className="flex flex-col items-center relative">
-        <img src={main1} alt="Member 1" className="w-full max-w-[340px]" />
-        <div className="w-[90%] max-w-[320px] h-[165px] rounded-2xl shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 items-center justify-center">
-          <h1 className="text-[#253D4E] text-2xl font-semibold">H. Merinda</h1>
-          <p className="text-[#7E7E7E] text-[17px] font-medium">CEO & Co-Founder</p>
-          <div className="flex gap-3 mt-2">
-            <img src={facebook} alt="facebook" />
-            <img src={instagram} alt="instagram" />
-            <img src={telegram} alt="telegram" />
-            <img src={youtube} alt="youtube" />
+          {/* Team Members */}
+          <div className="flex flex-col md:flex-row gap-20 sm:10 justify-center items-center ">
+            {/* Member 1 */}
+            <div className="flex flex-col items-center relative">
+              <img
+                src={main1}
+                alt="Member 1"
+                className="w-full max-w-[340px]"
+              />
+              <div className="w-[90%] max-w-[320px] h-[165px] rounded-2xl shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 items-center justify-center">
+                <h1 className="text-[#253D4E] text-2xl font-semibold">
+                  H. Merinda
+                </h1>
+                <p className="text-[#7E7E7E] text-[17px] font-medium">
+                  CEO & Co-Founder
+                </p>
+                <div className="flex gap-3 mt-2">
+                  <img src={facebook} alt="facebook" />
+                  <img src={instagram} alt="instagram" />
+                  <img src={telegram} alt="telegram" />
+                  <img src={youtube} alt="youtube" />
+                </div>
+              </div>
+            </div>
+
+            {/* Member 2 */}
+            <div className="flex flex-col items-center relative">
+              <img
+                src={main2}
+                alt="Member 2"
+                className="w-full max-w-[340px]"
+              />
+              <div className="w-[90%] max-w-[320px] h-[165px] rounded-2xl shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 items-center justify-center">
+                <h1 className="text-[#253D4E] text-2xl font-semibold">
+                  Dilan Specter
+                </h1>
+                <p className="text-[#7E7E7E] text-[17px] font-medium">
+                  Head Engineer
+                </p>
+                <div className="flex gap-3 mt-2">
+                  <img src={facebook} alt="facebook" />
+                  <img src={instagram} alt="instagram" />
+                  <img src={telegram} alt="telegram" />
+                  <img src={youtube} alt="youtube" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Member 2 */}
-      <div className="flex flex-col items-center relative">
-        <img src={main2} alt="Member 2" className="w-full max-w-[340px]" />
-        <div className="w-[90%] max-w-[320px] h-[165px] rounded-2xl shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 items-center justify-center">
-          <h1 className="text-[#253D4E] text-2xl font-semibold">Dilan Specter</h1>
-          <p className="text-[#7E7E7E] text-[17px] font-medium">Head Engineer</p>
-          <div className="flex gap-3 mt-2">
-            <img src={facebook} alt="facebook" />
-            <img src={instagram} alt="instagram" />
-            <img src={telegram} alt="telegram" />
-            <img src={youtube} alt="youtube" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
     </div>
   );
 };
