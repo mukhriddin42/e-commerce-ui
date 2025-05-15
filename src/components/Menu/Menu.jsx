@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <nav className="px-20 flex justify-between top-[97px] py-4 fixed bg-white w-full z-10">
+      <nav className="px-20 flex justify-between top-[97px] py-4 fixed bg-white w-full z-1000">
         <ul className="flex gap-7 items-center font-semibold quicksand">
           <label
             htmlFor=""
@@ -59,7 +59,9 @@ const Menu = () => {
             Pages
             <IoIosArrowDown />
           </li>
-          <li className="cursor-pointer">Contact</li>
+          <li className="cursor-pointer">
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
         <div className="flex items-center gap-3">
           <SlEarphonesAlt className="text-3xl" />
