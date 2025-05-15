@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import LayoutAbout from "./components/LayoutAbout/LayoutAbout";
 import About from "./pages/About";
-import Blogs from "./pages/Blogs";
+// import Blogs from "./pages/Blogs";
 import Home__2 from "./pages/Home__2";
+import { Contact } from "./pages/Contact";
 
 const App = () => {
   return (
@@ -12,10 +13,11 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LayoutAbout />}>
-            <Route path="/" element={<h1>Home</h1>}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/blogs" element={<Blogs />}></Route>
-            <Route path="/home" element={<Home__2 />}></Route>
+            <Route index element={<h1>Home</h1>}></Route>
+            <Route path="about" element={<About />}></Route>
+            {/* <Route path="blogs" element={<Blogs />}></Route> */}
+            <Route path="home" element={<Home__2 />}></Route>
+            <Route path="contact" element={<Contact />}></Route>
           </Route>
           <Route path="/" element={<Layout />}>
             <Route index element={<h1>home</h1>}></Route>
@@ -26,11 +28,6 @@ const App = () => {
               path="ordertracking"
               element={<h1>Order Tracking</h1>}
             ></Route>
-
-
-
-
-            
           </Route>
         </Routes>
       </BrowserRouter>

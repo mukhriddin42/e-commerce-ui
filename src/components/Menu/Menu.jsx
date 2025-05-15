@@ -59,7 +59,9 @@ const Menu = () => {
             Pages
             <IoIosArrowDown />
           </li>
-          <li className="cursor-pointer">Contact</li>
+          <li className="cursor-pointer">
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
         <div className="flex items-center gap-3">
           <SlEarphonesAlt className="text-3xl" />
