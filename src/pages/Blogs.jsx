@@ -18,6 +18,26 @@ const Blogs = () => {
     { id: 6, name: "Home", icon: "🏠" },
   ];
 
+
+  const items = [
+    { name: "Chen Cardigan", price: "$99.50", image: savat },
+    { name: "Chen Sweater", price: "$99.50", image: savat },
+    { name: "Colorful Jacket", price: "$25", image: savat },
+    { name: "Lorem, ipsum", price: "$25", image: savat },
+  ];
+
+const galleryImages = [
+  { src: savat, alt: "Carrots" },
+  { src: savat, alt: "Bell Peppers" },
+  { src: savat, alt: "Orange Juice" },
+  { src: savat, alt: "Bananas" },
+  { src: savat, alt: "Watermelon" },
+  { src: savat, alt: "Durian" },
+];
+
+
+
+
   useEffect(()=> {
       axios
         .get("https://dummyjson.com/products")
@@ -32,8 +52,10 @@ const Blogs = () => {
 
   return (
     <div id="blogs">
-      <div className="container mt-[30px] m-auto">
+      <div className="container  m-auto">
         <div
+
+          className="top container mt-[150px] w-full h-[237px] rounded-2xl p-[70px] "
           className="top container mt-[200px] w-full h-[237px] rounded-2xl p-[70px] "
           style={{ backgroundImage: `url(${bgImage})` }}
         >
@@ -146,7 +168,6 @@ const Blogs = () => {
                   <hr className="mt-1 border-t border-gray-300" />
                 </div>
 
-                {/* Kategoriyalar ro'yxati */}
                 <div className="mt-4">
                   {categories.map((category, index) => (
                     <div
@@ -157,7 +178,7 @@ const Blogs = () => {
                           : "bg-gray-50"
                       }`}
                     >
-                      {/* Ikonka va kategoriya nomi */}
+                    
                       <div className="flex items-center">
                         <div className="category-icon w-[30px] h-[30px] flex items-center justify-center text-xl">
                           {category.icon}
@@ -167,7 +188,6 @@ const Blogs = () => {
                         </h1>
                       </div>
 
-                      {/* Raqamli belgi */}
                       <div className="badge w-6 h-6 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-sm">
                         {index + 2}
                       </div>
@@ -175,7 +195,41 @@ const Blogs = () => {
                   ))}
                 </div>
               </div>
+            //   filter kategoriya tugadi
             }
+           
+    <div className=" m-auto p-4 w-[320px] mt-10 shadow-2xl rounded-2xl">
+      <h3 className=" font-semibold text-lg mb-2">Trending Now</h3>
+      <hr className="border-t border-gray-300 mb-4" />
+      {items.map((item, index) => (
+        <div key={index} className="flex items-center mb-4">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-12 h-12 mr-3"
+          />
+          <div>
+            <p className="text-green-500 font-bold">{item.price}</p>
+            <p className="text-gray-800">{item.name}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+<div className=" m-auto mt-16 p-4 w-[320px]  shadow rounded-2xl">
+  <h3 className="text-gray-800 font-semibold text-lg mb-2">Gallery</h3>
+  <hr className="border-t border-gray-300 mb-4" />
+  <div className="grid grid-cols-3 gap-4">
+    {galleryImages.map((image, index) => (
+      <img
+        key={index}
+        src={image.src}
+        alt={image.alt}
+        className="w-full h-24 object-cover rounded-md"
+      />
+    ))}
+  </div>
+</div>
           </div>
         </div>
       </div>

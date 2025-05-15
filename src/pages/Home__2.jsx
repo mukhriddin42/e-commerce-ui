@@ -3,7 +3,7 @@ import React from "react";
 const Home__2 = () => {
   return (
     <div
-      className="relative w-full h-[400px] bg-cover bg-center rounded-[30px] px-10 py-12 flex flex-col justify-center gap-6"
+      className="container m-auto relative w-full h-[400px] bg-cover bg-center rounded-[30px]  flex flex-col justify-center gap-6 mt-50"
       style={{ backgroundImage: "url('src/assets/Home/tabpanel.png')" }}
     >
       <h1 className="text-[48px] leading-[56px] font-bold text-[#253D4E] font-quicksand">
