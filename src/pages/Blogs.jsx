@@ -34,8 +34,14 @@ const Blogs = () => {
     { src: savat, alt: "Durian" },
   ];
 
-const tags = ["× Cabbage", "× Broccoli", "× Smoothie", "× Fruit", "× Salad", "× Appetizer"];
-
+  const tags = [
+    "× Cabbage",
+    "× Broccoli",
+    "× Smoothie",
+    "× Fruit",
+    "× Salad",
+    "× Appetizer",
+  ];
 
   useEffect(() => {
     axios
@@ -192,7 +198,7 @@ const tags = ["× Cabbage", "× Broccoli", "× Smoothie", "× Fruit", "× Salad"
               </div>
               //   filter kategoriya tugadi
             }
-{/* Trending filter */}
+            {/* Trending filter */}
 
             <div className=" m-auto p-4 w-[320px] mt-10 shadow-2xl rounded-2xl">
               <h3 className=" font-semibold text-lg mb-2">Trending Now</h3>
@@ -211,7 +217,7 @@ const tags = ["× Cabbage", "× Broccoli", "× Smoothie", "× Fruit", "× Salad"
                 </div>
               ))}
             </div>
-{/* Gallery */}
+            {/* Gallery */}
 
             <div className=" m-auto mt-16 p-4 w-[320px]  shadow rounded-2xl">
               <h3 className="text-gray-800 font-semibold text-lg mb-2">
@@ -229,23 +235,19 @@ const tags = ["× Cabbage", "× Broccoli", "× Smoothie", "× Fruit", "× Salad"
                 ))}
               </div>
             </div>
-{/* Popular tags filter */}
+            {/* Popular tags filter */}
 
-
-<div className="Popular_tags  m-auto mt-16 p-4 w-[320px]  shadow rounded-2xl"> 
-<h1 className="text-gray-800 font-semibold text-lg mb-2 ">Popular tags</h1>
-<hr />
-<div className="tag_buttons">
-{
-tags.map((tags)=>(
-  <button className="filterBtn">{tags} </button>
-))
-} 
-
-</div>
-</div>
-
-
+            <div className="Popular_tags  m-auto mt-16 p-4 w-[320px]  shadow rounded-2xl">
+              <h1 className="text-gray-800 font-semibold text-lg mb-2 ">
+                Popular tags
+              </h1>
+              <hr />
+              <div className="tag_buttons">
+                {tags.map((tags) => (
+                  <button className="filterBtn">{tags} </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
