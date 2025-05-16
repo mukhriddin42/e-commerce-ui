@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosSend } from "react-icons/io";
-
+import { IoMdSend } from "react-icons/io";
 
 const Home__2 = () => {
   return (
@@ -26,19 +26,19 @@ const Home__2 = () => {
           Subscribe
         </button>
       </div> */}
-       <div className="flex items-center bg-white rounded-full shadow-md w-full max-w-md overflow-hidden">
-      <div className="pl-4">
-        <PaperAirplaneIcon className="h-5 w-5 text-gray-400" />
+      <div className="flex items-center bg-white rounded-full shadow-md w-full max-w-md overflow-hidden">
+        <div className="pl-4">
+          <IoMdSend className="h-5 w-5 text-gray-400" />
+        </div>
+        <input
+          type="email"
+          placeholder="Your email address"
+          className="flex-1 px-3 py-2 outline-none text-sm text-gray-700 placeholder-gray-400 bg-transparent"
+        />
+        <button className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 text-sm rounded-r-full transition">
+          Subscribe
+        </button>
       </div>
-      <input
-        type="email"
-        placeholder="Your email address"
-        className="flex-1 px-3 py-2 outline-none text-sm text-gray-700 placeholder-gray-400 bg-transparent"
-      />
-      <button className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 text-sm rounded-r-full transition">
-        Subscribe
-      </button>
-    </div>
     </div>
   );
 };
