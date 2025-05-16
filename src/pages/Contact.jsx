@@ -64,7 +64,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <MapComponent className="mx-auto w-full max-w-[1686px]" />
+      <MapComponent className="mx-auto w-full max-w-[1686px] max-h-90" />
       <div className="container mx-[auto] pl-5  flex gap-40 flex-wrap ">
         <div className="flex flex-col gap-1">
           <h1 className=" text-[#3BB77E] text-2xl">Office</h1>
