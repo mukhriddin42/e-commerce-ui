@@ -144,6 +144,7 @@ export const Contact = () => {
                 </div>
 
                 <textarea
+                  maxLength={1000}
                   className="rounded-xl border border-[#ECECEC] px-5 py-4 text-[18px] w-[870px] h-[200px] outline-none resize-none"
                   placeholder="Your message"
                 ></textarea>
