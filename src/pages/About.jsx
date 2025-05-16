@@ -14,8 +14,8 @@ import telegram from "../assets/About/icons/twitter.svg";
 import youtube from "../assets/About/icons/youtube.png";
 const About = () => {
   return (
-    <div className="mt-60">
-      <ul className="flex mx-auto gap-4 pl-5 pt-5 pb-5 ">
+    <div className="mt-45 ">
+      <ul className="flex mx-auto gap-4 pl-5 pt-5 pb-5 fixed bg-white w-full ">
         <li className="flex gap-2 text-[14px] text-[#3BB77E]">
           <img src={home} alt="" />
           Home
@@ -26,7 +26,7 @@ const About = () => {
       <hr className="text-[#ECECEC]" />
 
       {/*  */}
-      <div className="container mx-auto flex flex-col lg:flex-row gap-10 justify-between items-center px-4 py-10">
+      <div className="container mx-auto mt-5 flex flex-col lg:flex-row gap-10 justify-between items-center px-4 py-10">
         <div className="w-full lg:w-1/2">
           <img src={Welcome} alt="Welcome" className="w-full h-auto" />
         </div>
