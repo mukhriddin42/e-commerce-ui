@@ -119,36 +119,37 @@ export const Contact = () => {
                 </p>
               </div>
 
-              <form className="flex flex-col gap-5">
-                <div className="flex flex-wrap gap-5">
+              <form className="flex flex-col gap-5 w-full">
+                <div className="flex flex-wrap gap-5 w-full">
                   <input
-                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-[423px] outline-none"
+                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-full max-w-[423px] outline-none"
                     type="text"
                     placeholder="First Name"
                   />
                   <input
-                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-[423px] outline-none"
+                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-full max-w-[423px] outline-none"
                     type="text"
                     placeholder="Your Phone"
                   />
                   <input
-                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-[423px] outline-none"
+                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-full max-w-[423px] outline-none"
                     type="text"
                     placeholder="Your Email"
                   />
                   <input
-                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-[423px] outline-none"
+                    className="rounded-xl border border-[#ECECEC] h-[64px] pl-5 text-[18px] w-full max-w-[423px] outline-none"
                     type="text"
                     placeholder="Subject"
                   />
                 </div>
 
                 <textarea
-                  className="rounded-xl border border-[#ECECEC] px-5 py-4 text-[18px] w-[870px] h-[200px] outline-none resize-none"
+                  maxLength={1000}
+                  className="rounded-xl border border-[#ECECEC] px-5 py-4 text-[18px] w-full max-w-[870px] h-[200px] outline-none resize-none"
                   placeholder="Your message"
                 ></textarea>
 
-                <button className="rounded-xl bg-[#3BB77E] text-white font-semibold w-40 h-[50px] hover:bg-[#339e6d] transition">
+                <button className="rounded-xl bg-[#3BB77E] text-white font-semibold w-[160px] h-[50px] hover:bg-[#339e6d] transition">
                   Send message
                 </button>
               </form>
