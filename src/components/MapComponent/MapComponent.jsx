@@ -16,12 +16,13 @@ L.Icon.Default.mergeOptions({
 function MapComponent({ className = "" }) {
   return (
     <div
-      className={`w-full h-[400px] border-2 border-pink-500 my-10 ${className}`}
+      className={` h-[300px]  sm:h-[350px] md:h-[400px] lg:h-[500px] border-2 border-pink-500 my-10 ${className}`}
     >
       <MapContainer
         center={[48.8566, 2.3522]}
         zoom={4}
-        className="w-full h-full"
+        className="w-full h-full z-0 "
+        scrollWheelZoom={false}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
