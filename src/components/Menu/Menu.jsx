@@ -2,13 +2,13 @@ import React from "react";
 import { IoGrid } from "react-icons/io5";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
-import { SlEarphonesAlt } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import Phone from "../Phone/Phone";
 
 const Menu = () => {
   return (
     <>
-      <nav className="px-20 flex justify-between top-[97px] py-4 fixed bg-white w-full z-1000">
+      <nav className="px-20 hidden lg:flex justify-between top-[97px] py-4 fixed bg-white w-full z-[1000]">
         <ul className="flex gap-7 items-center font-semibold quicksand">
           <label
             htmlFor=""
@@ -63,15 +63,7 @@ const Menu = () => {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-        <div className="flex items-center gap-3">
-          <SlEarphonesAlt className="text-3xl" />
-          <div>
-            <h1 className="text-[#3BB77E] text-2xl font-semibold quicksand">
-              1900 - 888
-            </h1>
-            <p className="text-[#7E7E7E]">24/7 Support Center</p>
-          </div>
-        </div>
+        <Phone />
       </nav>
     </>
   );
