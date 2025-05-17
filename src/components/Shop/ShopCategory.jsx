@@ -30,13 +30,13 @@ const ShopCategory = () => {
       </div>
       <div className="overflow-x-auto">
         <div className="flex gap-4">
-          {categories.map((cat, idx) => (
+          {categories.map((product, i) => (
             <div
-              key={idx}
+              key={i}
               className="flex flex-col items-center justify-center w-[145px] p-5 py-6 bg-[#F4F6FA] cursor-pointer rounded-lg border hover:shadow-md transition"
             >
-              <img className="mb-2 w-[60px]" src={cat.icon} />
-              <p className="text-center text-sm font-medium">{cat.name}</p>
+              <img className="mb-2 w-[60px]" src={product.icon} />
+              <p className="text-center text-sm font-medium">{product.name}</p>
             </div>
           ))}
         </div>
