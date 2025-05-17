@@ -30,36 +30,47 @@ const Menu = () => {
           </label>
           <li className="flex items-center gap-2 cursor-pointer">
             <MdOutlineLocalFireDepartment className="text-[#3BB77E]" />
-            Deals
+            <Link to="/">Products</Link>
           </li>
           <li className="cursor-pointer">
-            <Link to="/home" className="flex items-center gap-2">
-              Home <IoIosArrowDown />
-            </Link>
+            <Link to="/home">Home</Link>
           </li>
           <li className="cursor-pointer">
             <Link to="/about" className="flex items-center gap-2">
               About <IoIosArrowDown />
             </Link>
           </li>
-          <li className="cursor-pointer flex items-center gap-2">
-            Shop <IoIosArrowDown />
+          <li>
+            <Link to="/shop" className="flex gap-2 items-center">
+              Shop <IoIosArrowDown />
+            </Link>
           </li>
-          <li className="cursor-pointer flex items-center gap-2">
-            Vendors
-            <IoIosArrowDown />
+          <li>
+            <Link to="/vendors" className="flex gap-2 items-center">
+              Vendors
+              <IoIosArrowDown />
+            </Link>
           </li>
-          <li className="cursor-pointer flex items-center gap-2">
-            Mega menu
-            <IoIosArrowDown />
+          <li>
+            <Link to="/megamenu" className="flex gap-2 items-center">
+              Mega menu
+              <IoIosArrowDown />
+            </Link>
           </li>
-          <li className="cursor-pointer flex items-center gap-2">
-            <Link to="/blogs">Blog</Link>
-            <IoIosArrowDown />
+          <li>
+            <Link to="/blogs" className="flex gap-2 items-center">
+              Blog
+              <IoIosArrowDown />
+            </Link>
           </li>
-          <li className="cursor-pointer flex items-center gap-2">
-            Pages
-            <IoIosArrowDown />
+          <li>
+            <Link
+              className="cursor-pointer flex items-center gap-2"
+              to="/pages"
+            >
+              Pages
+              <IoIosArrowDown />
+            </Link>
           </li>
           <li className="cursor-pointer">
             <Link to="/contact">Contact</Link>
