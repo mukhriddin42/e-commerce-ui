@@ -14,7 +14,7 @@ const ListSidebar = () => {
       .then(res => {
         setProducts(res.data.products);
         setTotalPages(Math.ceil(res.data.total / 6));
-        1
+        
       });
 
     axios
