@@ -6,6 +6,8 @@ import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import Home__2 from "./pages/Home__2";
 import { Contact } from "./pages/Contact";
+import Home from "./pages/Home";
+import ListSidebar from "./pages/list__sidebar";
 
 const App = () => {
   return (
@@ -13,10 +15,23 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LayoutAbout />}>
-            <Route index element={<h1>Home</h1>}></Route>
-            <Route path="about" element={<About />}></Route>
-            <Route path="blogs" element={<Blogs />}></Route>
+            <Route index element={<Home />}></Route>
             <Route path="home" element={<Home__2 />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="shop" element={<ListSidebar />}></Route>
+            <Route
+              path="vendors"
+              element={<h1 className="mt-50">Vendors</h1>}
+            ></Route>
+            <Route
+              path="megamenu"
+              element={<h1 className="mt-50">Mega Menu</h1>}
+            ></Route>
+            <Route path="blogs" element={<Blogs />}></Route>
+            <Route
+              path="pages"
+              element={<h1 className="mt-50">Pages</h1>}
+            ></Route>
             <Route path="contact" element={<Contact />}></Route>
           </Route>
           <Route path="/" element={<Layout />}>
