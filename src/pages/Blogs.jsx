@@ -38,7 +38,9 @@ const Blogs = () => {
         {/* top end */}
 
         {/* beginning oi=f the main content */}
-
+        {
+          hello world 
+        }
         <div className="mainContent container mt-16  p-2 min-h-[100vh] grid ">
           <div className="articles min-h-[100%] p-4">
             <div className="topArticles w-full flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
