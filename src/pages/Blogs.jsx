@@ -8,7 +8,6 @@ import axios from "axios";
 const Blogs = () => {
   const [products, setproducts] = useState([]);
 
-  
 
   useEffect(() => {
     axios
@@ -25,8 +24,7 @@ const Blogs = () => {
   return (
     <div id="blogs">
       <div className="container  m-auto">
-        <div
-          className="top container mt-[200px] w-full h-[237px] rounded-2xl p-[70px] "
+        <div className="top container mt-[200px] w-full h-[237px] rounded-2xl p-[70px] "
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="top-details flex flex-col lg:flex-row justify-between gap-4">
@@ -107,7 +105,7 @@ const Blogs = () => {
 
           {/* Articlni filter va search qismi  */}
 
-       
+
         </div>
       </div>
     </div>
