@@ -44,18 +44,28 @@ const Nav = () => {
         </label>
         <ul className="flex gap-4">
           <li className="cursor-pointer p-2">
-            <Link to="/asa" className="flex items-center justify-center gap-2">
+            <Link
+              to="/wishlist"
+              className="flex items-center justify-center gap-2"
+            >
               <IoMdHeartEmpty className="text-2xl" />
               Wishlist
             </Link>
           </li>
           <li className="flex items-center gap-2 cursor-pointer p-2">
-            <FiShoppingCart className="text-2xl" />
-            Cart
+            <Link to="/" className="flex items-center justify-center gap-2">
+              <FiShoppingCart className="text-2xl" />
+              Cart
+            </Link>
           </li>
           <li className="flex items-center gap-2 cursor-pointer p-2">
-            <FaRegUser className="text-2xl" />
-            Account
+            <Link
+              to="/account"
+              className="flex items-center justify-center gap-2"
+            >
+              <FaRegUser className="text-2xl" />
+              Account
+            </Link>
           </li>
         </ul>
       </nav>

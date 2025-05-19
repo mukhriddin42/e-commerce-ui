@@ -8,13 +8,22 @@ import Home__2 from "./pages/Home__2";
 import { Contact } from "./pages/Contact";
 import Home from "./pages/Home";
 import ListSidebar from "./pages/list__sidebar";
+import LayoutHeader from "./components/LayoutHeader/LayoutHeader";
+import Account from "./pages/Account";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/"></Route> */}
+          <Route path="/" element={<LayoutHeader />}>
+            <Route
+              path="wishlist"
+              element={<h1 className="mt-50"></h1>}
+            ></Route>
+            <Route path="account" element={<Account />}></Route>
+          </Route>
+
           <Route path="/" element={<LayoutAbout />}>
             <Route index element={<Home />}></Route>
             <Route path="home" element={<Home__2 />}></Route>
