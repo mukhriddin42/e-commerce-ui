@@ -7,6 +7,7 @@ import Blogs from "./pages/Blogs";
 import Home__2 from "./pages/Home__2";
 import { Contact } from "./pages/Contact";
 import Home from "./pages/Home";
+import ListSidebar from "./pages/list__sidebar";
 
 const App = () => {
   return (
@@ -17,10 +18,7 @@ const App = () => {
             <Route index element={<Home />}></Route>
             <Route path="home" element={<Home__2 />}></Route>
             <Route path="about" element={<About />}></Route>
-            <Route
-              path="shop"
-              // element={}
-            ></Route>
+            <Route path="shop" element={<ListSidebar />}></Route>
             <Route
               path="vendors"
               element={<h1 className="mt-50">Vendors</h1>}
