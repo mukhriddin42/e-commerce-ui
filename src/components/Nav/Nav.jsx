@@ -43,9 +43,11 @@ const Nav = () => {
           </select>
         </label>
         <ul className="flex gap-4">
-          <li className="flex items-center justify-center gap-2 cursor-pointer p-2">
-            <IoMdHeartEmpty className="text-2xl" />
-            Wishlist
+          <li className="cursor-pointer p-2">
+            <Link to="/asa" className="flex items-center justify-center gap-2">
+              <IoMdHeartEmpty className="text-2xl" />
+              Wishlist
+            </Link>
           </li>
           <li className="flex items-center gap-2 cursor-pointer p-2">
             <FiShoppingCart className="text-2xl" />
