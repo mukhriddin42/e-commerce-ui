@@ -19,7 +19,7 @@ const App = () => {
             <Route path="about" element={<About />}></Route>
             <Route
               path="shop"
-              element={<h1 className="mt-50">Shop</h1>}
+              // element={}
             ></Route>
             <Route
               path="vendors"
