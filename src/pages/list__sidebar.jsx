@@ -4,7 +4,6 @@ import axios from 'axios';
 
 const ListSidebar = () => {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
@@ -14,60 +13,12 @@ const ListSidebar = () => {
       .then(res => {
         setProducts(res.data.products);
         setTotalPages(Math.ceil(res.data.total / 6));
-        
-      });
-      
-    axios
-      .get("https://dummyjson.com/products/categories")
-      .then(res => {
-        const catData = res.data.map(cat =>
-          typeof cat === "string" ? { name: cat } : cat
-        );
-        setCategories(catData);
       });
   }, [page]);
 
   return (
+    
     <div className="container">
-      <aside className="sidebar">
-        <h3>Category</h3>
-        <ul>
-          {categories.slice(0, 5).map((cat, index) => (
-            <li key={index}>{cat.name}</li>
-          ))}
-        </ul>
-
-        <div className="filter-card">
-          <h2 className="sort__title">Fill by price</h2>
-
-          <div className="price-range">
-            <input type="range" min="500" max="1000" className="range-input" />
-            <div className="price-values">
-              <span>From: <span className="green-text">$500</span></span>
-              <span>To: <span className="green-text">$1,000</span></span>
-            </div>
-          </div>
-
-          <div className="section">
-            <p className="section-title">Color</p>
-            <label><input type="checkbox" /> Red</label>
-            <label><input type="checkbox" /> Green</label>
-            <label><input type="checkbox" /> Blue</label>
-          </div>
-
-          <div className="section">
-            <p className="section-title">Item Condition</p>
-            <label><input type="checkbox" /> New</label>
-            <label><input type="checkbox" /> Refurbished</label>
-            <label><input type="checkbox" /> Used</label>
-          </div>
-
-          <button className="filterr-button">
-            <i className="fa-solid fa-filter"></i> Filter
-          </button>
-        </div>
-      </aside>
-
       <main className="product-section">
         <p>We found <b>{products.length}</b> items for you!</p>
 
