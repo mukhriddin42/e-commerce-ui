@@ -16,7 +16,7 @@ const ListSidebar = () => {
         setTotalPages(Math.ceil(res.data.total / 6));
         
       });
-
+      
     axios
       .get("https://dummyjson.com/products/categories")
       .then(res => {
