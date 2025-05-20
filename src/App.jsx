@@ -61,7 +61,11 @@ const App = () => {
           </Route>
           <Route path="account" element={<Account />}>
             <Route path="orders" element={<Orders />} />
-            {/* boshqa ichki bo‘limlar */}
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="trackyourorder" element={<TrackYourOrders />} />
+            <Route path="myaddress" element={<MyAddress />} />
+            <Route path="accountdetails" element={<AccountDetails />} />
+            <Route path="logout" element={<Logout />} />
           </Route>
         </Routes>
       </BrowserRouter>
