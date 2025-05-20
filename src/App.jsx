@@ -11,6 +11,7 @@ import ListSidebar from "./pages/list__sidebar";
 import LayoutHeader from "./components/LayoutHeader/LayoutHeader";
 import Account from "./pages/Account";
 import BlogDetails from "./pages/BlogDetails";
+import Orders from "./AccountPages/Orders";
 
 const App = () => {
   return (
@@ -39,7 +40,7 @@ const App = () => {
               element={<h1 className="mt-50">Mega Menu</h1>}
             ></Route>
             <Route path="blogs" element={<Blogs />}></Route>
-            <Route path="/blogs/:id" element={<BlogDetails/>} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
             <Route
               path="pages"
               element={<h1 className="mt-50">Pages</h1>}
@@ -55,6 +56,10 @@ const App = () => {
               path="ordertracking"
               element={<h1>Order Tracking</h1>}
             ></Route>
+          </Route>
+          <Route path="account" element={<Account />}>
+            <Route path="orders" element={<Orders />} />
+            {/* boshqa ichki bo‘limlar */}
           </Route>
         </Routes>
       </BrowserRouter>
