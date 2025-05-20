@@ -18,6 +18,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
+          {/* menu account, wishlist , cart */}
           <Route path="/" element={<LayoutHeader />}>
             <Route
               path="wishlist"
@@ -25,7 +26,7 @@ const App = () => {
             ></Route>
             <Route path="account" element={<Account />}></Route>
           </Route>
-
+          {/* about */}
           <Route path="/" element={<LayoutAbout />}>
             <Route index element={<Home />}></Route>
             <Route path="home" element={<Home__2 />}></Route>
@@ -47,6 +48,7 @@ const App = () => {
             ></Route>
             <Route path="contact" element={<Contact />}></Route>
           </Route>
+          {/* header */}
           <Route path="/" element={<Layout />}>
             <Route index element={<h1>home</h1>}></Route>
             <Route path="aboutus" element={<h1>About Us</h1>}></Route>
