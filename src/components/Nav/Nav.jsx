@@ -6,13 +6,34 @@ import { FaRegUser } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
   return (
     <div className="fixed top-0 bg-white w-full z-1000">
-      <nav className="flex sm:hidden md:hidden xl:hidden 2xl:flex items-center justify-between px-20 py-5 border-b border-[#ECECEC]">
+      <div className="flex w-full shadow-sm xl:hidden 2xl:hidden py-5 justify-center">
+        <div className="flex items-center justify-between w-[90%]">
+          <RxHamburgerMenu className="text-2xl" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
+          <ul className="flex gap-2">
+            <li className="cursor-pointer">
+              <Link to="/wishlist">
+                <IoMdHeartEmpty className="text-2xl" />
+              </Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="/">
+                <FiShoppingCart className="text-2xl" />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav className="hidden sm:hidden md:hidden xl:flex 2xl:flex items-center justify-between px-20 py-5 border-b border-[#ECECEC]">
         <Link to="/">
-          <img src={logo} alt="" />
+          <img className="max-w-[150px]" src={logo} alt="" />
         </Link>
         <label
           htmlFor=""

@@ -21,7 +21,7 @@ const categories = [
 
 const ShopCategory = () => {
   return (
-    <div className="p-4 bg-white rounded-2xl shadow-md">
+    <div className="w-full p-4 bg-white rounded-2xl shadow-md">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold">Shop by Categories</h2>
         <a href="#" className="text-sm text-blue-500 hover:underline">
