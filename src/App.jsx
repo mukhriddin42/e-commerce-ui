@@ -12,6 +12,11 @@ import LayoutHeader from "./components/LayoutHeader/LayoutHeader";
 import Account from "./pages/Account";
 import BlogDetails from "./pages/BlogDetails";
 import Orders from "./AccountPages/Orders";
+import Dashboard from "./AccountPages/Dashboard";
+import TrackYourOrders from "./AccountPages/TrackYourOrders";
+import MyAddress from "./AccountPages/MyAddress";
+import AccountDetails from "./AccountPages/AccountDetails";
+import Logout from "./AccountPages/Logout";
 
 const App = () => {
   return (
