@@ -17,7 +17,7 @@ const ListSidebar = () => {
 
   return (
     <div className="flex p-6 mt-44">
-      <Category/>
+      <Category />
 
       <main className="flex-1">
         <p className="mb-6 text-lg text-gray-800">
@@ -90,11 +90,10 @@ const ListSidebar = () => {
               return (
                 <button
                   key={i}
-                  className={`w-10 h-10 rounded-full text-sm ${
-                    page === pageNumber
+                  className={`w-10 h-10 rounded-full text-sm ${page === pageNumber
                       ? 'bg-emerald-500 text-white font-bold'
                       : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-                  }`}
+                    }`}
                   onClick={() => setPage(pageNumber)}
                 >
                   {pageNumber}
