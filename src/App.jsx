@@ -17,6 +17,7 @@ import TrackYourOrders from "./AccountPages/TrackYourOrders";
 import MyAddress from "./AccountPages/MyAddress";
 import AccountDetails from "./AccountPages/AccountDetails";
 import Logout from "./AccountPages/Logout";
+import { NavLink, Outlet, Navigate } from "react-router-dom";
 
 const App = () => {
   return (
@@ -65,7 +66,8 @@ const App = () => {
             ></Route>
           </Route>
           <Route path="account" element={<Account />}>
-            <Route index element={<Dashboard />} />
+            <Route index element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
             <Route path="trackyourorder" element={<TrackYourOrders />} />
             <Route path="myaddress" element={<MyAddress />} />
