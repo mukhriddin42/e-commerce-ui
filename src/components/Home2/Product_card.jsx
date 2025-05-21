@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import "../index.css";
 import { IoCartOutline } from "react-icons/io5";
 
 const products = [
