@@ -41,8 +41,8 @@ export const Contact = () => {
   };
 
   return (
-    <div className="mt-55">
-      <div className="container mx-auto px-4 py-10 flex flex-col lg:flex-row gap-10 xl:items-end">
+    <div className="">
+      <div className="container mx-auto px-4  flex flex-col lg:flex-row gap-10 xl:items-end">
         <div className="w-full lg:max-w-[447px] flex flex-col gap-5">
           <h1 className="text-[#3BB77E] text-base md:text-lg lg:text-[24px]">How can help you?</h1>
           <h2 className="text-xl md:text-2xl lg:text-[48px] font-semibold text-[#253D4E] leading-snug">
