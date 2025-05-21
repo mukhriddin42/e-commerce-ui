@@ -16,8 +16,7 @@ const ListSidebar = () => {
   }, [page]);
 
   return (
-    <div className="flex p-6 mt-44">
-      <Category />
+    <div className="flex p-6">
 
       <main className="flex-1">
         <p className="mb-6 text-lg text-gray-800">
