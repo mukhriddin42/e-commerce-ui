@@ -30,11 +30,9 @@ const newProducts = [
 ];
 
 const Category = () => {
-  
-
   return (
     <>
-      <div className="flex w-[300px] flex-col gap-4">
+      <div className="flex min-w-[300px] flex-col gap-4">
         <div className="rounded-xl shadow p-4 bg-white">
           <h2 className="font-semibold text-lg mb-4">Category</h2>
           <ul className="space-y-2">

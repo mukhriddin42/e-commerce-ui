@@ -26,10 +26,7 @@ const App = () => {
         <Routes>
           {/* menu account, wishlist , cart */}
           <Route path="/" element={<LayoutHeader />}>
-            <Route
-              path="wishlist"
-              element={<h1 className="mt-50">Wishlist</h1>}
-            ></Route>
+            <Route path="wishlist" element={<h1>Wishlist</h1>}></Route>
             <Route path="account" element={<Account />}></Route>
           </Route>
           {/* about */}
@@ -38,20 +35,11 @@ const App = () => {
             <Route path="home" element={<Home__2 />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route path="shop" element={<ListSidebar />}></Route>
-            <Route
-              path="vendors"
-              element={<h1 className="mt-50">Vendors</h1>}
-            ></Route>
-            <Route
-              path="megamenu"
-              element={<h1 className="mt-50">Mega Menu</h1>}
-            ></Route>
+            <Route path="vendors" element={<h1>Vendors</h1>}></Route>
+            <Route path="megamenu" element={<h1>Mega Menu</h1>}></Route>
             <Route path="blogs" element={<Blogs />}></Route>
             <Route path="/blogs/:id" element={<BlogDetails />} />
-            <Route
-              path="pages"
-              element={<h1 className="mt-50">Pages</h1>}
-            ></Route>
+            <Route path="pages" element={<h1>Pages</h1>}></Route>
             <Route path="contact" element={<Contact />}></Route>
           </Route>
           {/* header */}
