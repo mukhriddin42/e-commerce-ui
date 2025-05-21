@@ -26,7 +26,7 @@ const BlogDetails = () => {
   if (!recipe) return null;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="mt-[200px] max-w-4xl mx-auto px-4 py-8">
       <img
         src={recipe.image}
         alt={recipe.name}
