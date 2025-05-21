@@ -25,8 +25,8 @@ const LayoutAbout = () => {
         {isOpen && <Category />}
         <Outlet />
       </div>
-      {/* <TrendingProducts /> */}
-      <div className="py-2 px-3">
+      <div className="py-2 px-20">
+        <TrendingProducts />
         <StayHome />
       </div>
       <Footer />
