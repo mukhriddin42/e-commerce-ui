@@ -6,7 +6,7 @@ import Tabpanel from "../components/Home2/Tabpanel.jsx";
 
 const Home2 = () => {
   return (
-    <div className="container m-auto">
+    <div className="container m-auto ">
       <section>
         <Tabpanel />
       </section>
