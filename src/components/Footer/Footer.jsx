@@ -9,8 +9,8 @@ import googlePlay from "../../assets/img/googleplay.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center">
-      <div className="mt-70 grid text-[#253D4E] border-b border-[#BCE3C9] pb-6 w-[90%] gap-10  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+    <div className="flex justify-center mt-20">
+      <div className="grid text-[#253D4E] border-b border-[#BCE3C9] pb-6 w-[90%] gap-10  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
         <ul className="flex flex-col gap-3">
           <img className="w-[200px]" src={logo} alt="" />
           <li>Awesome grocery store website template</li>

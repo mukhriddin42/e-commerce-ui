@@ -15,15 +15,8 @@ import youtube from "../assets/About/icons/youtube.png";
 const About = () => {
   return (
     <div className="mt-45 ">
-      <ul className="flex mx-auto gap-4 pl-5 pt-5 pb-5 fixed bg-white w-full ">
-        <li className="flex gap-2 text-[14px] text-[#3BB77E]">
-          <img src={home} alt="" />
-          Home
-        </li>
-        <li className="text-[#7E7E7E] text-[14px]">Pages </li>
-        <li className="text-[#7E7E7E]  text-[14px]">About us</li>
-      </ul>
-      <hr className="text-[#ECECEC]" />
+    
+     
 
       {/*  */}
       <div className="container mx-auto mt-5 flex flex-col lg:flex-row gap-10 justify-between items-center px-4 py-10">
