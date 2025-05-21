@@ -15,8 +15,6 @@ const Home = () => {
         <div className="w-full max-w-screen-xl px-4">
           <div className="flex flex-col w-full gap-5">
             {/* <ShopCategory /> */}
-            <TrendingProducts />
-            <StayHome />
           </div>
         </div>
       </div>
