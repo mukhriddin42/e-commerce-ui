@@ -4,7 +4,7 @@ import sellerPng from "../../assets/img/seller.png";
 
 const StayHome = () => {
   return (
-    <div className="bg-[#D8F1E5] justify-between rounded-2xl pt-10 px-10 w-full flex flex-wrap">
+    <div className="bg-[#D8F1E5] justify-between rounded-2xl pt-10 px-10 w-full flex flex-wrap mt-6">
       <div className="flex justify-between w-full">
         <div className="w-[35%] flex justify-center flex-col gap-5 items-baseline pb-8 z-1">
           <h1 className="text-3xl quicksand font-semibold text-[#253D4E]">
