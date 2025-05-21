@@ -3,6 +3,8 @@ import Product_card from "../components/Home2/Product_card.jsx";
 import DailyBestSells from "../components/Home2/Daily_best_sells.jsx";
 import DealsOfTheDay from "../components/Home2/Deals_of_the_day.jsx";
 import Tabpanel from "../components/Home2/Tabpanel.jsx";
+import TredingProducts from "../components/TrendingProducts/TrendingProducts.jsx";
+import StayHome from "../components/StayHome/StayHome.jsx";
 
 const Home2 = () => {
   return (
@@ -82,7 +84,7 @@ const Home2 = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="relative rounded-lg overflow-hidden h-64 md:h-72 bg-[url('src/assets/Home/piyoz.png')] bg-cover bg-center">
@@ -146,6 +148,10 @@ const Home2 = () => {
       <DailyBestSells />
 
       <DealsOfTheDay />
+
+      <TredingProducts />
+
+      <StayHome />
     </div>
   );
 };
