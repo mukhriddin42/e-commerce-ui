@@ -26,15 +26,23 @@ const Orders = () => {
       total: "$280.00",
       items: 3,
     },
+    {
+      id: "3",
+      number: "#2366",
+      date: "August 02, 2020",
+      status: "Completed",
+      total: "$280.00",
+      items: 3,
+    },
   ];
   return (
     <div>
-      <div>
-        <h1>Your Orders</h1>
+      <div className="">
+        <h1 className=" font-semibold text-4xl pb-10 pt-5">Your Orders</h1>
         <div className="w-full overflow-auto">
-          <table className="min-w-full">
+          <table className="min-w-full border">
             <thead>
-              <tr className="bg-gray-50">
+              <tr className="">
                 <th className="py-3 px-4 text-left font-medium text-gray-700">
                   Order
                 </th>
