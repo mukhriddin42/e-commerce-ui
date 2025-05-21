@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import newProcutsImg1 from "../../assets/img/newproducts.png";
 import newProcutsImg2 from "../../assets/img/newproducts1.png";
 import newProcutsImg3 from "../../assets/img/newproducts2.png";
@@ -30,6 +30,8 @@ const newProducts = [
 ];
 
 const Category = () => {
+  
+
   return (
     <>
       <div className="flex w-[300px] flex-col gap-4">

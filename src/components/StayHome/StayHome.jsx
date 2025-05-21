@@ -6,7 +6,7 @@ const StayHome = () => {
   return (
     <div className="bg-[#D8F1E5] justify-between mt-50 rounded-2xl pt-10 px-10 w-full flex flex-wrap">
       <div className="flex justify-between w-full">
-        <div className="w-[35%] flex justify-center flex-col gap-5 items-baseline pb-8">
+        <div className="w-[35%] flex justify-center flex-col gap-5 items-baseline pb-8 z-1">
           <h1 className="text-3xl quicksand font-semibold text-[#253D4E]">
             Stay home & get your daily needs from our shop
           </h1>
@@ -30,7 +30,7 @@ const StayHome = () => {
             </button>
           </label>
         </div>
-        <img className="w-[30%]" src={sellerPng} alt="" />
+        <img className="min-w-[30%]" src={sellerPng} alt="" />
       </div>
     </div>
   );

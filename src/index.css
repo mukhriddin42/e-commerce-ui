@@ -1,21 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import "tailwindcss";
-@import 'leaflet/dist/leaflet.css';
+@import "leaflet/dist/leaflet.css";
 .quicksand {
-    font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
+.scrollbar-small::-webkit-scrollbar {
+  height: 4px;
+}
 
+.scrollbar-small::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.scrollbar-small::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
 
 @theme {
   --filter-btn-bg: #ffffff;
   --filter-btn-color: #3bb77e;
   --filter-btn-hover: #253d4e;
-    --soft-shadow:'01px2px0rgba(0,0,0,0.05)','extra-soft': "0 1px 1px 0 rgba(0, 0, 0, 0.02)";
- 
+  --soft-shadow: "01px2px0rgba(0,0,0,0.05)", "extra-soft": "0 1px 1px 0 rgba(0, 0, 0, 0.02)";
 }
 
-.softboxshadow{
+.softboxshadow {
   box-shadow: var(--soft-shadow);
 }
 
