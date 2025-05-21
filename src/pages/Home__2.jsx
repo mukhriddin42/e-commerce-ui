@@ -8,7 +8,6 @@ const Home2 = () => {
   return (
     <div className="container m-auto ">
       <Tabpanel />
-
       <div className="container mx-auto  py-8 mt-5">
         <div className="grid [grid-template-columns:repeat(auto-fit,minmax(120px,1fr))] gap-7">
           <div className="bg-green-50 rounded-lg flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
@@ -83,7 +82,7 @@ const Home2 = () => {
           </div>
         </div>
       </div>
-
+      
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="relative rounded-lg overflow-hidden h-64 md:h-72 bg-[url('src/assets/Home/piyoz.png')] bg-cover bg-center">
