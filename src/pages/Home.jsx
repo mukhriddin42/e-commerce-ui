@@ -7,21 +7,14 @@ import Nav from "../components/Nav/Nav";
 import Menu from "../components/Menu/Menu";
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
   return (
     <>
-      <Nav onToggleMenu={toggleMenu} />
-      <Menu onToggleMenu={toggleMenu} />
-      <div className="w-full flex justify-center mt-50">
+      {/* <Nav />
+      <Menu /> */}
+      <div className="w-full flex justify-center">
         <div className="w-full max-w-screen-xl px-4">
-          <div>{isOpen && <Category />}</div>
-          <div className="flex flex-col w-full my-4 gap-5">
-            <ShopCategory />
+          <div className="flex flex-col w-full gap-5">
+            {/* <ShopCategory /> */}
             <TrendingProducts />
             <StayHome />
           </div>
