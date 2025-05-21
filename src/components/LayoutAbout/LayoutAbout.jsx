@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 import Menu from "../Menu/Menu";
@@ -8,13 +8,19 @@ import FooterSection from "../FooterSection/FooterSection";
 import Category from "../Category/Category";
 
 const LayoutAbout = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <>
       {/* <Header /> */}
-      <Nav />
-      <Menu />
+      <Nav onToggleMenu={toggleMenu} />
+      <Menu onToggleMenu={toggleMenu} />
       <div className="flex px-3 gap-4 mt-50">
-        <Category />
+        {isOpen && <Category />}
         <Outlet />
       </div>
       <Footer />
