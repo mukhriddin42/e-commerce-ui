@@ -3,7 +3,6 @@ import { IoGrid } from "react-icons/io5";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
-import Phone from "../Phone/Phone";
 
 const Menu = () => {
   return (

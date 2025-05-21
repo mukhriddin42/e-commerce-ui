@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/img/logo.png";
 import { CiSearch } from "react-icons/ci";
 import { IoMdHeartEmpty } from "react-icons/io";
@@ -8,12 +8,15 @@ import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const Nav = () => {
+const Nav = ({ onToggleMenu }) => {
+
   return (
     <div className="fixed top-0 bg-white w-full z-1000">
       <div className="flex w-full shadow-sm xl:hidden 2xl:hidden py-5 justify-center">
         <div className="flex items-center justify-between w-[90%]">
-          <RxHamburgerMenu className="text-2xl" />
+          <button className="border p-1 rounded">
+            <RxHamburgerMenu className="text-2xl" onClick={onToggleMenu} />
+          </button>
           <Link to="/">
             <img src={logo} alt="" />
           </Link>
