@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = ({ onToggleMenu }) => {
-
   return (
     <div className="fixed top-0 bg-white w-full z-1000">
       <div className="flex w-full shadow-sm xl:hidden 2xl:hidden py-5 justify-center">
