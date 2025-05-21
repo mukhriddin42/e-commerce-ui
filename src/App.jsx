@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/" element={<LayoutHeader />}>
             <Route
               path="wishlist"
-              element={<h1 className="mt-50"></h1>}
+              element={<h1 className="mt-50">Wishlist</h1>}
             ></Route>
             <Route path="account" element={<Account />}></Route>
           </Route>
