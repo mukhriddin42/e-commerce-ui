@@ -12,6 +12,11 @@ import LayoutHeader from "./components/LayoutHeader/LayoutHeader";
 import Account from "./pages/Account";
 import BlogDetails from "./pages/BlogDetails";
 import Orders from "./AccountPages/Orders";
+import Dashboard from "./AccountPages/Dashboard";
+import TrackYourOrders from "./AccountPages/TrackYourOrders";
+import MyAddress from "./AccountPages/MyAddress";
+import AccountDetails from "./AccountPages/AccountDetails";
+import Logout from "./AccountPages/Logout";
 
 const App = () => {
   return (
@@ -61,7 +66,11 @@ const App = () => {
           </Route>
           <Route path="account" element={<Account />}>
             <Route path="orders" element={<Orders />} />
-            {/* boshqa ichki bo‘limlar */}
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="trackyourorder" element={<TrackYourOrders />} />
+            <Route path="myaddress" element={<MyAddress />} />
+            <Route path="accountdetails" element={<AccountDetails />} />
+            <Route path="logout" element={<Logout />} />
           </Route>
         </Routes>
       </BrowserRouter>
