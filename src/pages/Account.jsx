@@ -20,39 +20,39 @@ const Account = () => {
       <Nav />
       <Menu />
       <div className="container mx-auto flex gap-5 mt-50">
-        <div>
-          <NavLink to="dashboard">
-            <button className="text-white text-[18px] gap-2 cursor-pointer   rounded-xl border-2 w-60 flex items-center  pl-5 h-14 bg-green-500">
+        <div className="flex flex-col gap-3">
+          <NavLink to="/account">
+            <button className="text-wblack text-[18px] gap-2 cursor-pointer overflow-hidden   rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <VscSettings className="font-bold" />
               Dashboard
             </button>
           </NavLink>
           <NavLink to="orders">
-            <button className="text-white text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 bg-green-500">
+            <button className="text-black  text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <MdOutlineShoppingBag /> Orders
             </button>
           </NavLink>
           <NavLink to="trackyourorder">
-            <button className="text-white text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 bg-green-500">
+            <button className="text-black  text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <SlBasket className="font-bold" />
               Track Your Order
             </button>
           </NavLink>
           <NavLink to="myaddress">
-            <button className="text-white text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 bg-green-500">
+            <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <CiLocationOn className="font-bold" />
               My Address
             </button>
           </NavLink>
 
           <NavLink to="accountdetails">
-            <button className="text-white text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 bg-green-500">
+            <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <FiUser className="font-bold" />
               Account details
             </button>
           </NavLink>
           <NavLink to="logout">
-            <button className="text-white text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 bg-green-500">
+            <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <FiLogOut className="font-bold" />
               Logout
             </button>
