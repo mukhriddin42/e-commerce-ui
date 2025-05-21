@@ -18,7 +18,6 @@ const Account = () => {
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
-    // Only redirect if we're exactly at /account
     if (location.pathname === "/account") {
       navigate("dashboard");
     }
@@ -28,64 +27,64 @@ const Account = () => {
       <Header />
       <Nav />
       <Menu />
-      <div className="container mx-auto flex gap-5 mt-50">
+      <div className="container mx-auto flex gap-15 mt-50">
         <div className="flex flex-col gap-3">
           <NavLink
             to="dashboard"
-            className="overflow-hidden rounded-xl block w-60 h-14"
+            className="overflow-hidden text-black font-semibold rounded-xl block w-60 border-2 border-[#0000004a] h-14"
           >
-            <button className="text-wblack text-[18px] gap-2 cursor-pointer overflow-hidden   rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
+            <button className=" text-[18px] pb-1 gap-2 cursor-pointer overflow-hidden   rounded-xl  w-60 flex items-center  pl-5 h-14 ">
               <VscSettings className="font-bold" />
               Dashboard
             </button>
           </NavLink>
           <NavLink
-            className="overflow-hidden rounded-xl block w-60 h-14"
+            className="overflow-hidden text-black font-semibold rounded-xl block border-2 border-[#0000004a] w-60 h-14"
             to="orders"
           >
-            <button className="text-black  text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
+            <button className="  text-[18px] gap-2  pb-1  cursor-pointer rounded-xl  w-60 flex  items-center  pl-5 h-14 ">
               <MdOutlineShoppingBag /> Orders
             </button>
           </NavLink>
           <NavLink
-            className="overflow-hidden rounded-xl block w-60 h-14"
+            className="overflow-hidden text-black font-semibold rounded-xl block border-2 border-[#0000004a] w-60 h-14"
             to="trackyourorder"
           >
-            <button className="text-black  text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
+            <button className="  text-[18px] gap-2 pb-1   cursor-pointer rounded-xl  w-60 flex  items-center  pl-5 h-14 ">
               <SlBasket className="font-bold" />
               Track Your Order
             </button>
           </NavLink>
           <NavLink
-            className="overflow-hidden rounded-xl block w-60 h-14"
+            className="overflow-hidden text-black font-semibold rounded-xl border-2 border-[#0000004a] block w-60 h-14"
             to="myaddress"
           >
-            <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
+            <button className="textblack e text-[18px] gap-2 pb-1  cursor-pointer rounded-xl  w-60 flex items-center  pl-5 h-14 ">
               <CiLocationOn className="font-bold" />
               My Address
             </button>
           </NavLink>
 
           <NavLink
-            className="overflow-hidden rounded-xl block w-60 h-14"
+            className="overflow-hidden text-black font-semibold rounded-xl block border-2 border-[#0000004a] w-60 h-14"
             to="accountdetails"
           >
-            <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
+            <button className="textblack e text-[18px] gap-2 pb-1  cursor-pointer rounded-xl   w-60 flex  items-center  pl-5 h-14 ">
               <FiUser className="font-bold" />
               Account details
             </button>
           </NavLink>
           <NavLink
-            className="overflow-hidden rounded-xl block w-60 h-14"
+            className="overflow-hidden text-black font-semibold rounded-xl block border-2 border-[#0000004a] w-60 h-14"
             to="logout"
           >
-            <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
+            <button className="textblack e text-[18px] gap-2 pb-1  cursor-pointer rounded-xl  w-60  flex items-center  pl-5 h-14 ">
               <FiLogOut className="font-bold" />
               Logout
             </button>
           </NavLink>
         </div>
-        <div className="border w-full h-150">
+        <div className=" w-full h-150">
           <Outlet />
         </div>
       </div>
