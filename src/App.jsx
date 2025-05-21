@@ -17,6 +17,7 @@ import TrackYourOrders from "./AccountPages/TrackYourOrders";
 import MyAddress from "./AccountPages/MyAddress";
 import AccountDetails from "./AccountPages/AccountDetails";
 import Logout from "./AccountPages/Logout";
+import { NavLink, Outlet, Navigate } from "react-router-dom";
 
 const App = () => {
   return (
@@ -25,10 +26,7 @@ const App = () => {
         <Routes>
           {/* menu account, wishlist , cart */}
           <Route path="/" element={<LayoutHeader />}>
-            <Route
-              path="wishlist"
-              element={<h1 className="mt-50">Wishlist</h1>}
-            ></Route>
+            <Route path="wishlist" element={<h1>Wishlist</h1>}></Route>
             <Route path="account" element={<Account />}></Route>
           </Route>
           {/* about */}
@@ -37,20 +35,11 @@ const App = () => {
             <Route path="home" element={<Home__2 />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route path="shop" element={<ListSidebar />}></Route>
-            <Route
-              path="vendors"
-              element={<h1 className="mt-50">Vendors</h1>}
-            ></Route>
-            <Route
-              path="megamenu"
-              element={<h1 className="mt-50">Mega Menu</h1>}
-            ></Route>
+            <Route path="vendors" element={<h1>Vendors</h1>}></Route>
+            <Route path="megamenu" element={<h1>Mega Menu</h1>}></Route>
             <Route path="blogs" element={<Blogs />}></Route>
             <Route path="/blogs/:id" element={<BlogDetails />} />
-            <Route
-              path="pages"
-              element={<h1 className="mt-50">Pages</h1>}
-            ></Route>
+            <Route path="pages" element={<h1>Pages</h1>}></Route>
             <Route path="contact" element={<Contact />}></Route>
           </Route>
           {/* header */}
@@ -65,7 +54,8 @@ const App = () => {
             ></Route>
           </Route>
           <Route path="account" element={<Account />}>
-            <Route index element={<Dashboard />} />
+            <Route index element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
             <Route path="trackyourorder" element={<TrackYourOrders />} />
             <Route path="myaddress" element={<MyAddress />} />

@@ -12,8 +12,17 @@ import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import Menu from "../components/Menu/Menu";
-
+import { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 const Account = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  useEffect(() => {
+    // Only redirect if we're exactly at /account
+    if (location.pathname === "/account") {
+      navigate("dashboard");
+    }
+  }, [location, navigate]);
   return (
     <div>
       <Header />
@@ -21,37 +30,55 @@ const Account = () => {
       <Menu />
       <div className="container mx-auto flex gap-5 mt-50">
         <div className="flex flex-col gap-3">
-          <NavLink to="/account">
+          <NavLink
+            to="dashboard"
+            className="overflow-hidden rounded-xl block w-60 h-14"
+          >
             <button className="text-wblack text-[18px] gap-2 cursor-pointer overflow-hidden   rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <VscSettings className="font-bold" />
               Dashboard
             </button>
           </NavLink>
-          <NavLink to="orders">
+          <NavLink
+            className="overflow-hidden rounded-xl block w-60 h-14"
+            to="orders"
+          >
             <button className="text-black  text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <MdOutlineShoppingBag /> Orders
             </button>
           </NavLink>
-          <NavLink to="trackyourorder">
+          <NavLink
+            className="overflow-hidden rounded-xl block w-60 h-14"
+            to="trackyourorder"
+          >
             <button className="text-black  text-[18px] gap-2  cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <SlBasket className="font-bold" />
               Track Your Order
             </button>
           </NavLink>
-          <NavLink to="myaddress">
+          <NavLink
+            className="overflow-hidden rounded-xl block w-60 h-14"
+            to="myaddress"
+          >
             <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <CiLocationOn className="font-bold" />
               My Address
             </button>
           </NavLink>
 
-          <NavLink to="accountdetails">
+          <NavLink
+            className="overflow-hidden rounded-xl block w-60 h-14"
+            to="accountdetails"
+          >
             <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <FiUser className="font-bold" />
               Account details
             </button>
           </NavLink>
-          <NavLink to="logout">
+          <NavLink
+            className="overflow-hidden rounded-xl block w-60 h-14"
+            to="logout"
+          >
             <button className="textblack e text-[18px] gap-2 cursor-pointer rounded-xl border-2 w-60 flex items-center  pl-5 h-14 ">
               <FiLogOut className="font-bold" />
               Logout
