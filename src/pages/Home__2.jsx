@@ -5,6 +5,7 @@ import DealsOfTheDay from "../components/Home2/Deals_of_the_day.jsx";
 import Tabpanel from "../components/Home2/Tabpanel.jsx";
 import TredingProducts from "../components/TrendingProducts/TrendingProducts.jsx";
 import StayHome from "../components/StayHome/StayHome.jsx";
+import Feature_Category from "../components/Home2/Feature_Category.jsx";
 
 const Home2 = () => {
   return (
@@ -142,6 +143,8 @@ const Home2 = () => {
           </div>
         </div>
       </div>
+
+      <Feature_Category />
 
       <Product_card />
 
