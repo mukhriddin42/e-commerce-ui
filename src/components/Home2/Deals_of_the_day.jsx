@@ -43,7 +43,7 @@ export default function ProductCards() {
   ];
 
   return (
-    <div className="py-7 px-3 sm:px-6 lg:px-8 container m-auto">
+    <div className="py-7 container m-auto">
       <div className="mb-10 flex items-center justify-between flex-wrap">
         <h1 className="font-bold text-[32px] text-[#253D4E] leading-[38.4px] align-middle w-full sm:w-auto sm:text-[28px]">
           Deals Of The Day

@@ -21,12 +21,12 @@ const LayoutAbout = () => {
       {/* <Header /> */}
       <Nav onToggleMenu={toggleMenu} />
       <Menu onToggleMenu={toggleMenu} />
-      <div className="flex px-3 gap-4 mt-50">
+      <div className="flex px-20 gap-4 mt-50">
         {isOpen && <Category />}
         <Outlet />
       </div>
       <div className="py-2 px-20">
-        <TrendingProducts />
+        {/* <TrendingProducts /> */}
         <StayHome />
       </div>
       <Footer />

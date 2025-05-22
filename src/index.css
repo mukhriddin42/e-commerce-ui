@@ -47,9 +47,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.active{
-  background-color: #3BB77E;
- border-color: transparent !important;
- color: white; 
- font-weight: 600;
+.active {
+  background-color: #3bb77e;
+  border-color: transparent !important;
+  color: white;
+  font-weight: 600;
 }

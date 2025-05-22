@@ -3,7 +3,7 @@ import React from "react";
 const Feature_Category = () => {
   return (
     <div>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="relative rounded-lg overflow-hidden h-64 md:h-72 bg-[url('src/assets/Home/piyoz.png')] bg-cover bg-center">
             <div className="absolute inset-0 p-8 py-13 flex flex-col justify-between">

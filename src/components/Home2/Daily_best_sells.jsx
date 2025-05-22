@@ -107,7 +107,7 @@ export default function DailyBestSells() {
   const visibleProducts = products.slice(startIdx, startIdx + slidesToShow);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto py-8">
       <div className="flex flex-col lg:flex-row gap-6">
         <div
           className="w-full lg:w-1/4 rounded-lg overflow-hidden relative min-h-[200px] sm:min-h-[250px] lg:min-h-0"

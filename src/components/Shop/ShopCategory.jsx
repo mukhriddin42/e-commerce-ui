@@ -1,4 +1,5 @@
 import React from "react";
+import { FaChevronRight } from "react-icons/fa";
 import img1 from "../../assets/img/img1.png";
 import img2 from "../../assets/img/img2.png";
 import img3 from "../../assets/img/img3.png";
@@ -21,11 +22,11 @@ const categories = [
 
 const ShopCategory = () => {
   return (
-    <div className="p-4 bg-white rounded-2xl shadow-md">
+    <div className="w-full p-4 bg-white rounded-2xl shadow-md my-3">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold">Shop by Categories</h2>
         <a href="#" className="text-sm text-blue-500 hover:underline">
-          All Categories &gt;
+          All Categories <FaChevronRight />
         </a>
       </div>
       <div className="overflow-x-auto">
