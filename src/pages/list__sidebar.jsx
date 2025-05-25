@@ -71,58 +71,57 @@ const ListSidebar = () => {
           ))}
         </div>
 
-<div className="flex items-center gap-3 mt-10 ml-16">
-  <button
-    className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
-    onClick={() => setPage(prev => (prev > 1 ? prev - 1 : prev))}
-  >
-    <FaArrowLeft />
-  </button>
+        <div className="flex items-center gap-3 mt-10 ml-16">
+          <button
+            className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
+            onClick={() => setPage(prev => (prev > 1 ? prev - 1 : prev))}
+          >
+            <FaArrowLeft />
+          </button>
 
-  {Array.from({ length: totalPages }, (_, i) => {
-    const pageNumber = i + 1;
-    if (
-      pageNumber === 1 ||
-      pageNumber === totalPages ||
-      Math.abs(pageNumber - page) <= 1
-    ) {
-      return (
-        <button
-          key={i}
-          className={`w-10 h-10 rounded-full text-sm flex items-center justify-center ${
-            page === pageNumber
-              ? 'bg-emerald-500 text-white font-bold'
-              : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-          }`}
-          onClick={() => setPage(pageNumber)}
-        >
-          {pageNumber}
-        </button>
-      );
-    }
+          {Array.from({ length: totalPages }, (_, i) => {
+            const pageNumber = i + 1;
+            if (
+              pageNumber === 1 ||
+              pageNumber === totalPages ||
+              Math.abs(pageNumber - page) <= 1
+            ) {
+              return (
+                <button
+                  key={i}
+                  className={`w-10 h-10 rounded-full text-sm flex items-center justify-center ${page === pageNumber
+                      ? 'bg-emerald-500 text-white font-bold'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                    }`}
+                  onClick={() => setPage(pageNumber)}
+                >
+                  {pageNumber}
+                </button>
+              );
+            }
 
-    if (
-      (pageNumber === 2 && page > 3) ||
-      (pageNumber === totalPages - 1 && page < totalPages - 2)
-    ) {
-      return (
-        <span key={i} className="px-1 text-xl text-gray-400">
-          ...
-        </span>
-      );
-    }
+            if (
+              (pageNumber === 2 && page > 3) ||
+              (pageNumber === totalPages - 1 && page < totalPages - 2)
+            ) {
+              return (
+                <span key={i} className="px-1 text-xl text-gray-400">
+                  ...
+                </span>
+              );
+            }
 
-    return null;
-  })}
+            return null;
+          })}
 
-  {/* Keyingisi tugma */}
-  <button
-    className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
-    onClick={() => setPage(prev => (prev < totalPages ? prev + 1 : prev))}
-  >
-    <FaArrowRight />
-  </button>
-</div>
+          {/* Keyingisi tugma */}
+          <button
+            className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
+            onClick={() => setPage(prev => (prev < totalPages ? prev + 1 : prev))}
+          >
+            <FaArrowRight />
+          </button>
+        </div>
 
       </main>
     </div>
