@@ -17,8 +17,8 @@ import TrackYourOrders from "./AccountPages/TrackYourOrders";
 import MyAddress from "./AccountPages/MyAddress";
 import AccountDetails from "./AccountPages/AccountDetails";
 import Logout from "./AccountPages/Logout";
-import { NavLink, Outlet, Navigate } from "react-router-dom";
-import Shop_grid from "./pages/Shop_grid";
+import { Navigate } from "react-router-dom";
+import ShopCategory from "./components/Shop/ShopCategory";
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ const App = () => {
           {/* about */}
           <Route path="/" element={<LayoutAbout />}>
             <Route index element={<Home />}></Route>
-            <Route path="shopcategory" element={<Shop_grid />}></Route>
+            <Route path="shopcategory" element={<ShopCategory />}></Route>
             <Route path="home" element={<Home__2 />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route path="shop" element={<ListSidebar />}></Route>
