@@ -4,77 +4,38 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star, ShoppingCart } from "lucide-react";
 
 export default function DailyBestSells() {
+  const [products, setProducts] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(4);
 
-  const products = [
-    {
-      id: "1",
-      name: "All Natural Italian-Style Chicken Meatballs",
-      image: "src/assets/Home/Link → product-5-1.jpg.png",
-      rating: 5,
-      price: 238.85,
-      originalPrice: 245.8,
-      sold: 90,
-      total: 120,
-      tag: { text: "Save 25%", color: "bg-[#3BB77E]" },
-    },
-    {
-      id: "2",
-      name: "Angie's Boomchickapop Sweet and yummies",
-      image: "src/assets/Home/Link → product-2-1.jpg.png",
-      rating: 4,
-      price: 238.85,
-      originalPrice: 245.8,
-      sold: 90,
-      total: 120,
-      tag: { text: "Sale", color: "bg-[#67BCEE]" },
-    },
-    {
-      id: "3",
-      name: "Foster Farms Takeout Crispy Classic",
-      image: "src/assets/Home/Link → product-3-1.jpg.png",
-      rating: 5,
-      price: 238.85,
-      originalPrice: 245.8,
-      sold: 90,
-      total: 120,
-      tag: { text: "Best sale", color: "bg-[#F59758]" },
-    },
-    {
-      id: "4",
-      name: "Blue Diamond Almonds Lightly Salted",
-      image: "src/assets/Home/Link → product-4-1.jpg.png",
-      rating: 5,
-      price: 238.85,
-      originalPrice: 245.8,
-      sold: 90,
-      total: 120,
-      tag: { text: "Save 15%", color: "bg-[#F74B81]" },
-    },
-    {
-      id: "5",
-      name: "Organic Frozen Triple Berry Blend",
-      image: "src/assets/Home/Link → product-6-1.jpg.png",
-      rating: 4,
-      price: 238.85,
-      originalPrice: 245.8,
-      sold: 85,
-      total: 120,
-      tag: { text: "Save 10%", color: "bg-[#F74B81]" },
-    },
-    {
-      id: "6",
-      name: "Oroweat Country Buttermilk Bread",
-      image: "src/assets/Home/Link → product-7-1.jpg.png",
-      rating: 5,
-      price: 238.85,
-      originalPrice: 245.8,
-      sold: 95,
-      total: 120,
-      tag: { text: "Hot", color: "bg-[#3BB77E]" },
-    },
-  ];
+  useEffect(() => {
+    
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("https://dummyjson.com/products?limit=12");
+        const data = await res.json();
+        const formattedProducts = data.products.map((product) => ({
+          id: product.id,
+          name: product.title,
+          image: product.thumbnail,
+          rating: Math.round(product.rating),
+          price: product.price,
+          originalPrice: product.price + 10,
+          sold: Math.floor(Math.random() * 100),
+          total: 100,
+          tag: {
+            text: "Hot",
+            color: "bg-[#3BB77E]",
+          },
+        }));
+        setProducts(formattedProducts);
+      } catch (error) {
+        console.error("Xatolik yuz berdi:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -112,7 +73,7 @@ export default function DailyBestSells() {
         <div
           className="w-full lg:w-1/4 rounded-lg overflow-hidden relative min-h-[200px] sm:min-h-[250px] lg:min-h-0"
           style={{
-            backgroundImage: "url('src/assets/Home/banner.png')",
+            backgroundImage: "url('https://via.placeholder.com/400x250')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -195,10 +156,6 @@ export default function DailyBestSells() {
                       <div className="flex items-center justify-between text-xs text-gray-500">
                         <span>
                           Sold: {product.sold}/{product.total}
-                        </span>
-                        <span className="sr-only">
-                          {Math.round((product.sold / product.total) * 100)}%
-                          sold
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1.5 mt-1">
