@@ -21,15 +21,17 @@ const Menu = ({ onToggleMenu }) => {
             <Link to="/">Products</Link>
           </li>
           <li className="group relative">
-            <Link to="/home" className="flex gap-2 items-center">
+            {/* <Link to="" className="flex gap-2 items-center"> */}
+            <li className="flex gap-2 items-center">
               Home
               <IoIosArrowDown className="group-hover:rotate-180 duration-200 transition-all" />
-            </Link>
+            </li>
+            {/* </Link> */}
             <ul className="absolute grid gap-2 left-0 rounded bg-white shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-10">
-              <Link to="">
+              <Link to="/home">
                 <li className="p-1 rounded hover:bg-gray-100">Home 1</li>
               </Link>
-              <Link to="">
+              <Link to="/shopcategory">
                 <li className="p-1 rounded hover:bg-gray-100">Home 2</li>
               </Link>
             </ul>
