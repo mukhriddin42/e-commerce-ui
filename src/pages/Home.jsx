@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import TrendingProducts from "../components/TrendingProducts/TrendingProducts";
 import ShopCategory from "../components/Shop/ShopCategory";
 // import Category from "../components/Category/Category";
@@ -13,13 +13,11 @@ const Home = () => {
   return (
     <>
       <div className="w-full overflow-x-hidden">
-        {/* <div className="w-full max-w-screen-xl"> */}
         <div className="container flex flex-col">
           <Tabpanel />
           <ShopCategory />
           <Product_card />
           <Deals_of_the_day />
-          {/* </div> */}
         </div>
       </div>
     </>
