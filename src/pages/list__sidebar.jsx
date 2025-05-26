@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaStar, FaCartShopping, FaShuffle, FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
+import Deals_of_the_Day from '../components/Home2/Deals_of_the_day';
 
 const ListSidebar = () => {
   const [products, setProducts] = useState([]);
@@ -27,7 +28,7 @@ const ListSidebar = () => {
           {products.map(product => (
             <div
               key={product.id}
-              className="flex w-[1100px] h-[353px] bg-white rounded-xl shadow-md overflow-hidden relative p-6 box-border"
+              className="flex w-[1000px] h-[323px] bg-white rounded-xl shadow-md overflow-hidden relative p-6 box-border"
             >
               {product.isNew && (
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -123,6 +124,7 @@ const ListSidebar = () => {
           </button>
         </div>
 
+    <Deals_of_the_Day />
       </main>
     </div>
   );
