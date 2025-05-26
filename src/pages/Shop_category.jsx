@@ -1,7 +1,7 @@
 import React from "react";
 import Product_card from "../components/Home2/Product_card.jsx";
 
-const Shop_grid = () => {
+const Shop_category = () => {
   return (
     <>
       <Product_card />
@@ -9,4 +9,4 @@ const Shop_grid = () => {
   );
 };
 
-export default Shop_grid;
+export default Shop_category;
