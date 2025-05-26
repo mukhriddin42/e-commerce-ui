@@ -131,7 +131,6 @@ const products = [
   },
 ];
 
-
 function ProductCard({
   name,
   image,
@@ -231,7 +230,6 @@ function ProductCard({
   );
 }
 
-
 export default function PopularProducts() {
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -244,7 +242,6 @@ export default function PopularProducts() {
     "Vegetables",
     "Fruits",
   ];
-
 
   const filteredProducts =
     activeCategory === "All"
