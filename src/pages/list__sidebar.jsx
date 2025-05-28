@@ -24,7 +24,7 @@ const ListSidebar = () => {
           We found <b className="text-emerald-500 font-medium">{products.length}</b> items for you!
         </p>
 
-        <div className="flex flex-wrap gap-10 justify-center py-10">
+        <div className="flex flex-wrap gap-10 justify-center ">
           {products.map(product => (
             <div
               key={product.id}
@@ -114,8 +114,6 @@ const ListSidebar = () => {
 
             return null;
           })}
-
-          {/* Keyingisi tugma */}
           <button
             className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
             onClick={() => setPage(prev => (prev < totalPages ? prev + 1 : prev))}
