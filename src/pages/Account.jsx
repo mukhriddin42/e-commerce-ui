@@ -23,7 +23,7 @@ const Account = () => {
     }
   }, [location, navigate]);
   return (
-    <div>
+    <div className="">
       <Header />
       <Nav />
       <Menu />
@@ -88,7 +88,7 @@ const Account = () => {
           <Outlet />
         </div>
       </div>
-      <Footer />
+      <Footer className="!mt-50" />
     </div>
   );
 };
