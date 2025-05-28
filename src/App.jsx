@@ -17,7 +17,8 @@ import TrackYourOrders from "./AccountPages/TrackYourOrders";
 import MyAddress from "./AccountPages/MyAddress";
 import AccountDetails from "./AccountPages/AccountDetails";
 import Logout from "./AccountPages/Logout";
-import { NavLink, Outlet, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import ShopCategory from "./components/Shop/ShopCategory";
 
 const App = () => {
   return (
@@ -26,12 +27,16 @@ const App = () => {
         <Routes>
           {/* menu account, wishlist , cart */}
           <Route path="/" element={<LayoutHeader />}>
-            <Route path="wishlist" element={<h1>Wishlist</h1>}></Route>
+            <Route
+              path="wishlist"
+              element={<h1 className="mt-50">Wishlist</h1>}
+            ></Route>
             <Route path="account" element={<Account />}></Route>
           </Route>
           {/* about */}
           <Route path="/" element={<LayoutAbout />}>
             <Route index element={<Home />}></Route>
+            <Route path="shopcategory" element={<ShopCategory />}></Route>
             <Route path="home" element={<Home__2 />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route path="shop" element={<ListSidebar />}></Route>

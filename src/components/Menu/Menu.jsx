@@ -20,9 +20,21 @@ const Menu = ({ onToggleMenu }) => {
             <MdOutlineLocalFireDepartment className="text-[#3BB77E]" />
             <Link to="/">Products</Link>
           </li>
-          <li className="cursor-pointer">
-            <Link to="/home">Home</Link>
+          <li className="group relative">
+            <div className="flex gap-2 items-center cursor-pointer">
+              Home
+              <IoIosArrowDown className="group-hover:rotate-180 duration-200 transition-all" />
+            </div>
+            <ul className="absolute grid gap-2 left-0 rounded bg-white shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-10">
+              <li className="p-1 rounded hover:bg-gray-100">
+                <Link to="/home">Home 1</Link>
+              </li>
+              <li className="p-1 rounded hover:bg-gray-100">
+                <Link to="/shopcategory">Home 2</Link>
+              </li>
+            </ul>
           </li>
+
           <li className="cursor-pointer">
             <Link to="/about" className="flex items-center gap-2">
               About <IoIosArrowDown />
