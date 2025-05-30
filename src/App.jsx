@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import Loader from "./components/Loader/Loader";
 
 const Layout = lazy(() => import("./components/Layout/Layout"));
 const LayoutAbout = lazy(() => import("./components/LayoutAbout/LayoutAbout"));
@@ -27,7 +28,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             {/* menu account, wishlist , cart */}
             <Route path="/" element={<LayoutHeader />}>
