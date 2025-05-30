@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaStar, FaCartShopping, FaShuffle, FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
 import Deals_of_the_Day from '../components/Home2/Deals_of_the_day';
+import Snack from '../components/Snack/Snack'
 
 const ListSidebar = () => {
   const [products, setProducts] = useState([]);
@@ -19,8 +20,10 @@ const ListSidebar = () => {
 
   return (
     <div className="flex p-6">
+
       <main className="flex-1">
-        <p className="mb-6 ml-8 text-lg text-gray-800">
+      <Snack />
+        <p className="mb-6 ml-40  text-lg text-gray-800">
           We found <b className="text-emerald-500 font-medium">{products.length}</b> items for you!
         </p>
 
