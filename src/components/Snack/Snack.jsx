@@ -10,7 +10,7 @@ export default function SnackFilter() {
   ];
 
   return (
-    <div className="w-full h-[237px] bg-[#E3F3EA]  pl-28 rounded-2xl flex  items-center mb-10 ">
+    <div className="w-full h-[237px] bg-[#E3F3EA]  pl-28 rounded-2xl flex items-center mb-10 ">
       <div className=" justify-between gap-48 flex items-center  ">
         <div className="mb-6 ">
           <h1 className="text-[48px] leading-[57.6px] font-bold text-[#253D4E] mb-2">Snack</h1>
