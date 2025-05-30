@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import Product__wiew from "./pages/Product__wiew";
 
 const Layout = lazy(() => import("./components/Layout/Layout"));
 const LayoutAbout = lazy(() => import("./components/LayoutAbout/LayoutAbout"));
@@ -44,7 +45,7 @@ const App = () => {
               <Route path="home" element={<Home__2 />}></Route>
               <Route path="about" element={<About />}></Route>
               <Route path="shop" element={<ListSidebar />}></Route>
-              <Route path="vendors" element={<h1>Vendors</h1>}></Route>
+              <Route path="vendors" element={<Product__wiew />}></Route>
               <Route path="megamenu" element={<h1>Mega Menu</h1>}></Route>
               <Route path="blogs" element={<Blogs />}></Route>
               <Route path="/blogs/:id" element={<BlogDetails />} />
