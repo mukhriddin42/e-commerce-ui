@@ -15,8 +15,8 @@ export default function SnackFilter() {
         <div className="mb-6 ">
           <h1 className="text-[48px] leading-[57.6px] font-bold text-[#253D4E] mb-2">Snack</h1>
           <div className="text-gray-600 text-sm flex items-center gap-2 cursor-pointer mt-5">
-            <span className="text-green-600 flex items-center gap-1">
-             <Home className="w-4 h-4" />   Home
+            <span className="text-green-600 flex items-center gap-1 hover:">
+              <Home className="w-4 h-4" />   Home
             </span>
             <span>›</span>
             <span className="opacity-90 font-semibold">Shop</span>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FaStar, FaCartShopping, FaShuffle, FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
 import Deals_of_the_Day from '../components/Home2/Deals_of_the_day';
 import Snack from '../components/Snack/Snack'
+import { FaSortAmountDownAlt, FaThLarge } from 'react-icons/fa';
 
 const ListSidebar = () => {
   const [products, setProducts] = useState([]);
@@ -22,16 +23,32 @@ const ListSidebar = () => {
     <div className="flex p-6">
 
       <main className="flex-1">
-      <Snack />
-        <p className="mb-6 ml-40  text-lg text-gray-800">
-          We found <b className="text-emerald-500 font-medium">{products.length}</b> items for you!
-        </p>
+        <Snack />
+        <div className="flex items-center justify-between">
+          <p className="mb-6 ml-4 text-lg text-gray-800">
+            We found <b className="text-emerald-500 font-medium">{products.length}</b> items for you!
+          </p>
 
-        <div className="flex flex-wrap gap-10 justify-center ">
+          <div className="flex gap-4 p-4">
+            <div className="flex items-center border  rounded-xl w-[140px] h-[48px] justify-center text-center cursor-pointer border-[#ECECEC]">
+              <FaThLarge className="mr-2 text-[#777777]" />
+              <span className="text-[#777777]">Show: 50</span>
+              <span className="ml-2 text-[12px] text-gray-500">▼</span>
+            </div>
+
+            <div className="flex items-center border rounded-xl justify-center w-[185px] h-[48px] cursor-pointer border-[#ECECEC]">
+              <FaSortAmountDownAlt className="mr-2 text-[#777777]" />
+              <span className="text-[#777777] ">Sort by: Featured</span>
+              <span className="ml-2 text-[12px]  text-[#777777]">▼</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-10  ">
           {products.map(product => (
             <div
               key={product.id}
-              className="flex w-[1000px] h-[323px] bg-white rounded-xl shadow-md overflow-hidden relative p-6 box-border"
+              className="flex w-[1000px] h-[300px] bg-white rounded-xl  overflow-hidden relative p-3 box-border"
             >
               {product.isNew && (
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -42,7 +59,7 @@ const ListSidebar = () => {
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className=" border-r border-gray-300 mr-10"
+                className=" border-[1px] rounded-[15px] border-[#ECECEC] mr-10"
               />
 
               <div className="flex flex-col justify-center flex-1">
@@ -94,8 +111,8 @@ const ListSidebar = () => {
                 <button
                   key={i}
                   className={`w-10 h-10 rounded-full text-sm flex items-center justify-center ${page === pageNumber
-                      ? 'bg-emerald-500 text-white font-bold'
-                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                    ? 'bg-emerald-500 text-white font-bold'
+                    : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                     }`}
                   onClick={() => setPage(pageNumber)}
                 >
@@ -125,7 +142,7 @@ const ListSidebar = () => {
           </button>
         </div>
 
-    <Deals_of_the_Day />
+        <Deals_of_the_Day />
       </main>
     </div>
   );
