@@ -27,18 +27,18 @@ export default function ProductCards() {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col items-center relative pb-16"
+              className="flex flex-col items-center relative pb-20"
             >
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className="w-full max-w-[340px] rounded-xl shadow-md"
+                className="w-[285px] max-w-[340px] rounded-xl bg-amber-100"
               />
-              <div className="w-[90%] max-w-[320px] h-[165px] rounded-2xl shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 justify-center px-4">
+              <div className="w-[84%] max-w-[320px] h-[165px] rounded-2xl shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 justify-center px-4">
                 <h3 className="font-medium text-gray-800 text-sm line-clamp-2">
                   {product.title}
                 </h3>
