@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Menu = ({ onToggleMenu }) => {
   return (
     <>
-      <nav className="px-20 hidden xl:flex justify-between top-[87px] py-4 fixed bg-white w-full z-[1000] shadow-sm">
+      <nav className="px-20 flex xl:flex justify-between top-[87px] py-4 fixed bg-white w-full z-[1000] shadow-sm">
         <ul className="flex gap-7 items-center font-semibold quicksand">
           <button
             onClick={onToggleMenu}

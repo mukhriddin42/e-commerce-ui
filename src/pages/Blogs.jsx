@@ -22,11 +22,11 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div id="blogs">
+    <div id="blogs" className="mx-auto w-full">
       <div className="container mx-auto">
         {/* Header */}
         <div
-          className="mt-[200px] w-full h-[237px] rounded-2xl p-[70px] bg-cover bg-center"
+          className="mt-[50px] w-full h-[237px] rounded-2xl p-[70px] bg-cover bg-center"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="flex flex-col lg:flex-row justify-between gap-4">
@@ -62,12 +62,12 @@ const Blogs = () => {
           </div>
 
           {/* Recipe Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
             {recipes.map((recipe) => (
               <div
                 key={recipe.id}
                 onClick={() => navigate(`/blogs/${recipe.id}`)}
-                className="w-[350px] h-[472px] shadow-xl p-2 rounded-2xl cursor-pointer hover:shadow-2xl transition duration-300"
+                className="w-[350px] h-[460px] shadow-xl p-2 rounded-2xl cursor-pointer hover:shadow-2xl transition duration-300"
               >
                 <div className="w-full h-[310px] overflow-hidden rounded-xl">
                   <img
