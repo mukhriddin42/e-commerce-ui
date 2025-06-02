@@ -90,7 +90,7 @@ const ListSidebar = () => {
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className=" border-[1px] rounded-[15px] border-[#ECECEC] mr-10"
+                className=" border-[1px] rounded-[15px] border-[#ECECEC] mr-10 p-3"
               />
 
               <div className="flex flex-col justify-center flex-1">
