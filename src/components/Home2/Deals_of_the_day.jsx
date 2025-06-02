@@ -26,7 +26,7 @@ export default function ProductCards() {
           <FaAngleRight className="text-gray-400" />
         </div>
       </div>
-      <div className="container mx-auto">
+      <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
           {products.map((product) => (
             <div
@@ -36,7 +36,7 @@ export default function ProductCards() {
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className="w-[280px] max-w-[340px] rounded-xl border border-gray-200 bg-amber-50"
+                className="w-[270px] max-w-[340px] rounded-xl border border-gray-200 bg-amber-50"
               />
               <div className="w-[90%] max-w-[320px] h-[145px] rounded-2xl border border-gray-300 shadow-xl absolute bg-white -bottom-10 flex flex-col gap-1 justify-center px-4">
                 <h3 className="font-medium text-gray-800 text-sm line-clamp-2">
