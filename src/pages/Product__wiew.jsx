@@ -61,22 +61,29 @@ export default function ProductView() {
                     </div>
                 </div>
 
-                {/* Product Info */}
                 <div className="flex-1 space-y-4">
                     <div className="w-[80px] h-[30px] text-center pt-1 font-bold text-sm text-[#F74B81] bg-[#FDE0E9] rounded">Sale Off</div>
-                    <h1 className="text-[40px] font-bold text-[#253D4E]">{product.name}</h1>
+                    <h1 className="text-[40px] leading-[48px] font-bold text-[#253D4E]">{product.name}</h1>
 
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                         <Star className="w-4 h-4 text-yellow-500 fill-yellow-400" />
                         <span className="ml-2 text-[#B6B6B6]">({product.reviews} reviews)</span>
                     </div>
+                    <div className="relative w-fit h-[60px]">
+                        <div className="flex items-center gap-3">
+                            <span className="text-[32px] font-bold text-[#3BB77E] leading-none">
+                                ${product.offerPrice}
+                            </span>
+                            <span className="text-[#FDC040] text-[16px] font-semibold leading-none">
+                                26% Off
+                            </span>
+                        </div>
 
-                    <div className="text-[32px] font-bold text-[#3BB77E]">
-                        ${product.offerPrice}{' '}
-                        <span className="text-[#FDC040] text-[16px] font-semibold">26% Off</span>
+                        <span className="absolute left-1/2 -translate-x-1/2 top-[38px] text-[#B6B6B6] text-[20px] line-through">
+                            ${product.price}
+                        </span>
                     </div>
-                    <div className="line-through text-[#B6B6B6] text-[20px]">${product.price}</div>
-                    <p className="text-[#7E7E7E] text-[17px]">{product.description}</p>
+
 
                     {/* Size */}
                     <div className="flex gap-4 items-center">
@@ -85,11 +92,10 @@ export default function ProductView() {
                             {product.sizeOptions.map((s) => (
                                 <button
                                     key={s}
-                                    className={`transition-all duration-150 w-[41px] h-[32px] rounded text-sm ${
-                                        size === s
+                                    className={`transition-all duration-150 w-[41px] h-[32px] rounded text-sm ${size === s
                                             ? 'bg-[#3BB77E] text-white'
                                             : 'bg-white text-[#7E7E7E] hover:bg-[#3BB77E] hover:text-white'
-                                    }`}
+                                        }`}
                                     onClick={() => setSize(s)}
                                 >
                                     {s}
