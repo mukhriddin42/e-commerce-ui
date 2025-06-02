@@ -26,13 +26,16 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://680fc38127f2fdac240f4f99.mockapi.io/react", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://680fc38127f2fdac240f4f99.mockapi.io/react",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await res.json();
       console.log("Jo‘natildi:", data);
     } catch (err) {
@@ -44,24 +47,38 @@ export const Contact = () => {
     <div className="">
       <div className="container mx-auto px-4  flex flex-col lg:flex-row gap-10 xl:items-end">
         <div className="w-full lg:max-w-[447px] flex flex-col gap-5">
-          <h1 className="text-[#3BB77E] text-base md:text-lg lg:text-[24px]">How can help you?</h1>
+          <h1 className="text-[#3BB77E] text-base md:text-lg lg:text-[24px]">
+            How can help you?
+          </h1>
           <h2 className="text-xl md:text-2xl lg:text-[48px] font-semibold text-[#253D4E] leading-snug">
             Let us know how we can help you
           </h2>
           <p className="text-[#7E7E7E] md:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
           <p className="text-[#7E7E7E] md:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
         </div>
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-          {["Visit Feedback", "Employer Services", "Billing Inquiries", "General Inquiries"].map((title, i) => (
+          {[
+            "Visit Feedback",
+            "Employer Services",
+            "Billing Inquiries",
+            "General Inquiries",
+          ].map((title, i) => (
             <div key={i} className="p-4 rounded-md">
-              <h3 className={`text-2xl font-semibold ${i === 2 ? "text-[#3BB77E]" : "text-[#253D4E]"}`}>{`${String(i + 1).padStart(2, "0")}. ${title}`}</h3>
+              <h3
+                className={`text-2xl font-semibold ${
+                  i === 2 ? "text-[#3BB77E]" : "text-[#253D4E]"
+                }`}
+              >{`${String(i + 1).padStart(2, "0")}. ${title}`}</h3>
               <p className="text-[#7E7E7E] md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
             </div>
           ))}
@@ -74,7 +91,9 @@ export const Contact = () => {
         {["Office", "Studio", "Shop"].map((place, i) => (
           <div key={i} className="flex flex-col gap-1">
             <h1 className="text-[#3BB77E] text-2xl">{place}</h1>
-            <p className="text-[#7E7E7E]">205 North Michigan Avenue, Suite 810</p>
+            <p className="text-[#7E7E7E]">
+              205 North Michigan Avenue, Suite 810
+            </p>
             <p className="text-[#7E7E7E]">Chicago, 60601, USA</p>
             <p className="text-[#7E7E7E]">Phone: (123) 456-7890</p>
             <p className="text-[#7E7E7E]">Email: contact@Evara.com</p>
@@ -92,12 +111,18 @@ export const Contact = () => {
             <div className="flex flex-col gap-5">
               <div>
                 <h1 className="text-[#3BB77E] text-[24px]">Contact form</h1>
-                <h2 className="text-[36px] lg:text-[48px] font-semibold text-[#253D4E] leading-snug">Drop Us a Line</h2>
+                <h2 className="text-[36px] lg:text-[48px] font-semibold text-[#253D4E] leading-snug">
+                  Drop Us a Line
+                </h2>
                 <p className="text-[#7E7E7E] text-base">
-                  Your email address will not be published. Required fields are marked *
+                  Your email address will not be published. Required fields are
+                  marked *
                 </p>
               </div>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-5 w-full"
+              >
                 <div className="flex flex-wrap gap-5 w-full">
                   <input
                     name="name"
@@ -148,10 +173,15 @@ export const Contact = () => {
           </div>
 
           <div className="w-[385px] flex-shrink-0">
-            <img src={opa} alt="Contact" className="w-full h-[420px] object-contain" />
+            <img
+              src={opa}
+              alt="Contact"
+              className="w-full h-[420px] object-contain"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 };
+export default Contact;
