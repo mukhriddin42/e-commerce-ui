@@ -4,7 +4,7 @@ const Loader = () => {
   return (
     <>
       <div className="absolute w-full min-h-[100vh] flex justify-center items-center">
-        <span class="loader"></span>
+        <span className="loader"></span>
       </div>
     </>
   );
