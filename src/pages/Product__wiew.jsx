@@ -1,90 +1,155 @@
-import React from 'react'
+import React from 'react';
+import { Heart, HomeIcon, Share2, Star } from 'lucide-react';
+import { BsCart } from 'react-icons/bs';
+import { FaCartShopping } from 'react-icons/fa6';
 
-export default function Product__wiew() {
-const product = {
-        name: "Casual Shoes",
-        category: "Sports",
-        price: 100,
-        offerPrice: 80,
+export default function ProductView() {
+    const product = {
+        name: 'Seeds of Change Organic Quinoa, Brown',
+        category: 'Vegetables & Tubers',
+        price: 52,
+        offerPrice: 38,
         rating: 4,
+        reviews: 32,
+        sizeOptions: ['50g', '60g', '80g', '100g', '150g'],
+        selectedSize: '60g',
         images: [
             "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage.png",
             "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage2.png",
             "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage3.png",
             "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage4.png"
         ],
-        description: [
-            "High-quality material",
-            "Comfortable for everyday use",
-            "Available in different sizes"
-        ]
+        description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi.`,
+        details: {
+            type: 'Organic',
+            sku: 'FWM15VKT',
+            mfg: 'Jun 4, 2022',
+            tags: ['Snack', 'Organic', 'Brown'],
+            stock: '8 Items In Stock',
+            life: '70 days',
+        },
     };
 
     const [thumbnail, setThumbnail] = React.useState(product.images[0]);
+    const [quantity, setQuantity] = React.useState(1);
+    const [size, setSize] = React.useState(product.selectedSize);
 
-    return product && (
-        <div className="max-w-6xl w-full px-6">
-            <p>
-                <span>Home</span> /
-                <span> Products</span> /
-                <span> {product.category}</span> /
-                <span className="text-indigo-500"> {product.name}</span>
-            </p>
+    return (
+        <div className="max-w-6xl mx-auto px-4 py-10">
+            <div className="text-sm text-gray-500 mb-4">
+                <span className="text-[#3BB77E] font-semibold text-[14px] leading-[24px] "> Home </span> &gt; <span className='font-semibold text-[14px] leading-[24px] text-[#3BB77E]'>{product.category}</span> &gt;{' '}
+                <span className=" font-semibold text-[14px] leading-[24px] text-[#7E7E7E]">{product.name}</span>
+            </div>
 
-            <div className="flex flex-col md:flex-row gap-16 mt-4">
-                <div className="flex gap-3">
-                    <div className="flex flex-col gap-3">
-                        {product.images.map((image, index) => (
-                            <div key={index} onClick={() => setThumbnail(image)} className="border max-w-24 border-gray-500/30 rounded overflow-hidden cursor-pointer" >
-                                <img src={image} alt={`Thumbnail ${index + 1}`} />
-                            </div>
-                        ))}
-                    </div>
+            <div className="flex flex-col lg:flex-row gap-10">
 
-                    <div className="border border-gray-500/30 max-w-100 rounded overflow-hidden">
-                        <img src={thumbnail} alt="Selected product" />
+                <div className="flex flex-col lg:flex-row gap-5">
+
+                    <div className=" rounded-[15px] border-[#ECECEC] border-2 w-[500px] h-[500px]">
+                        <div className=''>
+                            <img src={thumbnail} alt="main" className=" object-cover rounded flex justify-center items-center m-auto  " />
+                        </div>
+                        <div className="flex gap-4 pt-24 ">
+                            {product.images.slice(1).map((img, i) => (
+                                <img
+                                    key={i}
+                                    src={img}
+                                    alt={`rel-${i}`}
+                                    className="w-[100px] h-[100px] rounded-[15px] shadow border object-cover p-2 border-[#ECECEC]"
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                <div className="text-sm w-full md:w-1/2">
-                    <h1 className="text-3xl font-medium">{product.name}</h1>
 
-                    <div className="flex items-center gap-0.5 mt-1">
-                        {Array(5).fill('').map((_, i) => (
-                            product.rating > i ? (
-                                <svg key={i} width="14" height="13" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.049.927c.3-.921 1.603-.921 1.902 0l1.294 3.983a1 1 0 0 0 .951.69h4.188c.969 0 1.371 1.24.588 1.81l-3.388 2.46a1 1 0 0 0-.364 1.118l1.295 3.983c.299.921-.756 1.688-1.54 1.118L9.589 13.63a1 1 0 0 0-1.176 0l-3.389 2.46c-.783.57-1.838-.197-1.539-1.118L4.78 10.99a1 1 0 0 0-.363-1.118L1.028 7.41c-.783-.57-.38-1.81.588-1.81h4.188a1 1 0 0 0 .95-.69z" fill="#615fff" />
-                                </svg>
-                            ) : (
-                                <svg width="14" height="13" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#615fff" fill-opacity="0.35" />
-                                </svg>
-                            )
-                        ))}
-                        <p className="text-base ml-2">({product.rating})</p>
+                <div className="flex-1 space-y-4">
+                    <div className="w-[80px] h-[30px] text-center pt-1 font-bold text-sm text-[#F74B81] bg-[#FDE0E9] rounded">Sale Off</div>
+                    <h1 className="text-[40px] font-bold leading-[48px] text-[#253D4E] w-[445px]">{product.name}</h1>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Star className="w-4 h-4  text-yellow-500 fill-yellow-400" />
+                        <span className='ml-10 font-medium text-[14px] text-[#B6B6B6]'>({product.reviews} reviews)</span>
+
                     </div>
 
-                    <div className="mt-6">
-                        <p className="text-gray-500/70 line-through">MRP: ${product.price}</p>
-                        <p className="text-2xl font-medium">MRP: ${product.offerPrice}</p>
-                        <span className="text-gray-500/70">(inclusive of all taxes)</span>
+                    <div className="text-[56px] leading[58px] font-bold text-[#3BB77E]">
+                        ${product.offerPrice}{' '}
+                        <span className="text-[#FDC040] text-[16px] font-semibold">26% Off</span>
+                    </div>
+                    <div className="line-through text-[#B6B6B6] text-[28px] leading-[28px] ">${product.price}</div>
+
+                    <p className="text-[#7E7E7E] text-[17px] leading-[24px] font-medium w-[466px]">{product.description}</p>
+
+                    {/* Sizes */}
+                    <div className='flex gap-4 items-center'>
+                        <p className="font-semibold text-[#7E7E7E] ">Size / Weight:</p>
+                        <div  >
+                            {product.sizeOptions.map((s) => (
+                                <button
+                                    key={s}
+                                    className={` transition-all duration-150 w-[41px] h-[32px] rounded  ${size === s ? 'bg-[#3BB77E] text-white' : '#7E7E7E hover:bg-[#3BB77E] hover:text-white'
+                                        }`}
+                                    onClick={() => setSize(s)}
+                                >
+                                    {s}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
-                    <p className="text-base font-medium mt-6">About Product</p>
-                    <ul className="list-disc ml-4 text-gray-500/70">
-                        {product.description.map((desc, index) => (
-                            <li key={index}>{desc}</li>
-                        ))}
-                    </ul>
+                    <div className="flex gap-3 items-center mt-4 flex-wrap ">
+                        <input
+                            type="number"
+                            value={quantity}
+                            onChange={(e) => setQuantity(Number(e.target.value))}
+                            min={1}
+                            max={5}
+                            className="border-2 border-[#3BB77E] rounded px-3 py-2 w-20 outline-0"
+                        />
 
-                    <div className="flex items-center mt-10 gap-4 text-base">
-                        <button className="w-full py-3.5 cursor-pointer font-medium bg-gray-100 text-gray-800/80 hover:bg-gray-200 transition" >
-                            Add to Cart
+
+                        <button className="bg-[#3BB77E] text-white w-[160px] h-[50px]  rounded-[6px] transition flex items-center justify-center gap-2 hover:bg-[#2a8f6b]">
+                          <FaCartShopping />  Add to cart
                         </button>
-                        <button className="w-full py-3.5 cursor-pointer font-medium bg-indigo-500 text-white hover:bg-indigo-600 transition" >
-                            Buy now
+
+                        <button className="border px-3 py-2 rounded text-gray-500 hover:text-red-500">
+                            <Heart className="w-5 h-5" />
+                        </button>
+
+                        <button className="border px-3 py-2 rounded text-gray-500 hover:text-blue-500">
+                            <Share2 className="w-5 h-5" />
                         </button>
                     </div>
+
+                    {/* Product Details */}
+                    <div className="grid grid-cols-2 gap-4 pt-6 border-t mt-6 text-sm">
+                        <div>
+                            <p className="text-gray-500">Type</p>
+                            <p className="text-gray-800 font-medium">{product.details.type}</p>
+                        </div>
+                        <div>
+                            <p className="text-gray-500">SKU</p>
+                            <p className="text-blue-600 font-medium">{product.details.sku}</p>
+                        </div>
+                        <div>
+                            <p className="text-gray-500">MFG</p>
+                            <p className="text-green-600 font-medium">{product.details.mfg}</p>
+                        </div>
+                        <div>
+                            <p className="text-gray-500">Tags</p>
+                            <p className="text-gray-800 font-medium">{product.details.tags.join(', ')}</p>
+                        </div>
+                        <div>
+                            <p className="text-gray-500">Life</p>
+                            <p className="text-gray-800 font-medium">{product.details.life}</p>
+                        </div>
+                        <div>
+                            <p className="text-gray-500">Stock</p>
+                            <p className="text-green-600 font-medium">{product.details.stock}</p>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
