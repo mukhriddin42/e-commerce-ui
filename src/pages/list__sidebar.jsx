@@ -25,6 +25,30 @@ const ListSidebar = () => {
       });
   }, [page]);
 
+
+  const getPaginationPages = (current, total) => {
+    const pages = [];
+
+    if (total <= 7) {
+      for (let i = 1; i <= total; i++) pages.push(i);
+    } else {
+      pages.push(1);
+
+      if (current > 3) pages.push("...");
+
+      for (let i = current - 1; i <= current + 1; i++) {
+        if (i > 1 && i < total) pages.push(i);
+      }
+
+      if (current < total - 2) pages.push("...");
+
+      pages.push(total);
+    }
+
+    return pages;
+  };
+
+
   return (
     <div className="flex p-6">
       <main className="flex-1">
@@ -66,7 +90,7 @@ const ListSidebar = () => {
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className=" border-[1px] rounded-[15px] border-[#ECECEC] mr-10"
+                className=" border-[1px] rounded-[15px] border-[#ECECEC] mr-10 p-3"
               />
 
               <div className="flex flex-col justify-center flex-1">
@@ -109,6 +133,7 @@ const ListSidebar = () => {
           ))}
         </div>
 
+
         <div className="flex items-center gap-3 mt-10 ml-16">
           <button
             className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
@@ -117,50 +142,32 @@ const ListSidebar = () => {
             <FaArrowLeft />
           </button>
 
-          {Array.from({ length: totalPages }, (_, i) => {
-            const pageNumber = i + 1;
-            if (
-              pageNumber === 1 ||
-              pageNumber === totalPages ||
-              Math.abs(pageNumber - page) <= 1
-            ) {
-              return (
-                <button
-                  key={i}
-                  className={`w-10 h-10 rounded-full text-sm flex items-center justify-center ${
-                    page === pageNumber
-                      ? "bg-emerald-500 text-white font-bold"
-                      : "bg-gray-200 text-gray-600 hover:bg-gray-300"
+          {getPaginationPages(page, totalPages).map((item, idx) =>
+            item === "..." ? (
+              <span key={idx} className="px-1 text-xl text-gray-400">...</span>
+            ) : (
+              <button
+                key={idx}
+                className={`w-10 h-10 rounded-full text-sm flex items-center justify-center ${page === item
+                    ? "bg-emerald-500 text-white font-bold"
+                    : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                   }`}
-                  onClick={() => setPage(pageNumber)}
-                >
-                  {pageNumber}
-                </button>
-              );
-            }
+                onClick={() => setPage(item)}
+              >
+                {item}
+              </button>
+            )
+          )}
 
-            if (
-              (pageNumber === 2 && page > 3) ||
-              (pageNumber === totalPages - 1 && page < totalPages - 2)
-            ) {
-              return (
-                <span key={i} className="px-1 text-xl text-gray-400">
-                  ...
-                </span>
-              );
-            }
-
-            return null;
-          })}
           <button
             className="w-10 h-10 bg-gray-200 rounded-full text-sm text-gray-600 hover:bg-gray-300 flex items-center justify-center"
-            onClick={() =>
-              setPage((prev) => (prev < totalPages ? prev + 1 : prev))
-            }
+            onClick={() => setPage((prev) => (prev < totalPages ? prev + 1 : prev))}
           >
             <FaArrowRight />
           </button>
         </div>
+
+
 
         <Deals_of_the_Day />
       </main>
