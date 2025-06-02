@@ -34,7 +34,7 @@ export default function ProductCards() {
               className="flex flex-col items-center relative pb-16"
             >
               <img
-                src={product.thumbnail}
+                src={'src/assets/Home/banner-5.png.png'}
                 alt={product.title}
                 className="w-full max-w-[340px] rounded-xl shadow-md"
               />
