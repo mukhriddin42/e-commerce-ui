@@ -83,7 +83,7 @@ export default function ProductView() {
                             ${product.price}
                         </span>
                     </div>
-                        <p className="text-[#7E7E7E] text-[17px]">{product.description}</p>
+                    <p className="text-[#7E7E7E] text-[17px]">{product.description}</p>
 
 
                     {/* Size */}
@@ -94,8 +94,8 @@ export default function ProductView() {
                                 <button
                                     key={s}
                                     className={`transition-all duration-150 w-[41px] h-[32px] rounded text-sm ${size === s
-                                            ? 'bg-[#3BB77E] text-white'
-                                            : 'bg-white text-[#7E7E7E] hover:bg-[#3BB77E] hover:text-white'
+                                        ? 'bg-[#3BB77E] text-white'
+                                        : 'bg-white text-[#7E7E7E] hover:bg-[#3BB77E] hover:text-white'
                                         }`}
                                     onClick={() => setSize(s)}
                                 >
@@ -134,8 +134,70 @@ export default function ProductView() {
                             </div>
                         ))}
                     </div>
+
+
                 </div>
             </div>
+            <div className="max-w-5xl mx-auto mt-10 p-4">
+                <div className="flex gap-6 border-b border-gray-200 text-[18px] font-medium">
+                    <button className="pb-3 border-b-2 border-[#3BB77E] text-[#3BB77E]">Description</button>
+                    <button className="pb-3 text-gray-500 hover:text-[#3BB77E]">Additional info</button>
+                    <button className="pb-3 text-gray-500 hover:text-[#3BB77E]">Vendor</button>
+                    <button className="pb-3 text-gray-500 hover:text-[#3BB77E]">Reviews (3)</button>
+                </div>
+
+                <div className="mt-6 text-[16px] w-[1020px] text-[#7E7E7E] leading-relaxed">
+                    <p className="mb-4">
+                        Uninhibited carnally hired played in whimpered dear gorilla koala depending and much yikes off far quetzal goodness and from for grimaced goodness unaccountably and meadowlark near unblushingly crucial scallop tightly neurotic hungrily some and dear furiously this apart. <br />
+                        Spluttered narrowly yikes left moth in yikes bowed this that grizzly much hello on spoon-fed that alas rethought much decently richly and wow against the frequent fluidly at formidable acceptably flapped besides and much circa far over the bucolically hey precarious goldfinch mastodon goodness gnashed a jellyfish and one however because.
+                    </p>
+
+                    <ul className="mb-6 list-disc list-inside text-[#7E7E7E]">
+                        <li><strong>Type Of Packing:</strong > Bottle</li>
+                        <li><strong>Color:</strong> Green, Pink, Powder Blue, Purple</li>
+                        <li><strong>Quantity Per Case:</strong> 100ml</li>
+                        <li><strong>Ethyl Alcohol:</strong> 70%</li>
+                        <li><strong>Piece In One:</strong> Carton</li>
+                    </ul>
+
+                    <p className="mb-6">
+                        Laconic overheard dear woodchuck wow this outrageously taut beaver hey hello far meadowlark imitatively egregiously hugged that yikes
+                        minimally unanimous pouted flirtatiously as beaver beheld above forward energetic across this jeepers beneficently cockily less a the
+                        raucously that magic upheld far so the this where crud then below after jeez enchanting drunkenly more much wow callously irrespective
+                        limpet.
+                    </p>
+
+                    {/* Packaging & Delivery */}
+                    <h2 className="text-[20px] font-semibold text-black mb-2">Packaging & Delivery</h2>
+                    <p className="mb-4">
+                        Less lion goodness that euphemistically robin expeditiously bluebird smugly scratched far while thus cackled sheepishly rigid after due one
+                        assenting regarding censorious while occasional or this more crane went more as this less much amid overhung anathematic because much
+                        held one exuberantly sheep goodness so where rat wry well concomitantly.
+                    </p>
+                    <p className="mb-6">
+                        Scallop or far crud plain remarkably far by thus far iguana lewd precociously and and less rattlesnake contrary caustic wow this near alas and
+next and pled the yikes articulate about as less cackled dalmatian in much less well jeering for the thanks blindly sentimental whimpered less
+across objectively fanciful grimaced wildly some wow and rose jeepers outgrew lugubrious luridly irrationally attractively dachshund.
+                    </p>
+
+                    {/* Suggested Use */}
+                    <h2 className="text-[20px] font-semibold text-black mb-2">Suggested Use</h2>
+                    <p className="mb-6">Refrigeration not necessary.<br />Stir before serving.</p>
+
+                    {/* Other Ingredients */}
+                    <h2 className="text-[20px] font-semibold text-black mb-2">Other Ingredients</h2>
+                    <ul className="list-disc list-inside mb-6">
+                        <li>Organic raw pecans, organic raw cashews.</li>
+                        <li>This butter was produced using a LTG (Low Temperature Grinding) process</li>
+                        <li>Made in machinery that processes tree nuts but does not process peanuts, gluten, dairy or soy</li>
+                    </ul>
+
+                    {/* Warnings */}
+                    <h2 className="text-[20px] font-semibold text-black mb-2">Warnings</h2>
+                    <p>Oil separation occurs naturally. May contain pieces of shell.</p>
+                </div>
+            </div>
+
         </div>
     );
 }
