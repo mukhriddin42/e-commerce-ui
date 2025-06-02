@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import qulupnay from "src/assets/Home/qulupnay.png";
+import olma from "src/assets/Home/olma.png"; // ✅ Rasmlar import qilindi
 import { LuSend } from "react-icons/lu";
 import {
   CakeIcon,
@@ -10,11 +11,23 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+// Kategoriya tugmalari
 const categories = [
   { name: "Cake & Milk", icon: <CakeIcon className="w-4 h-4 mr-1" /> },
   { name: "Coffee & Teas", icon: <Coffee className="w-4 h-4 mr-1" /> },
   { name: "Pet Foods", icon: <Bone className="w-4 h-4 mr-1" /> },
   { name: "Vegetables", icon: <Apple className="w-4 h-4 mr-1" /> },
+];
+
+// Dinamik mahsulotlar ro'yxati
+const featuredItems = [
+  { name: "Cake & Milk", items: 26, img: qulupnay, bg: "bg-green-50" },
+  { name: "Organic Kiwi", items: 28, img: olma, bg: "bg-[#F2FCE4]" },
+  { name: "Peach", items: 14, img: olma, bg: "bg-[#FFFCEB]" },
+  { name: "Red Apple", items: 54, img: olma, bg: "bg-[#ECFFEC]" },
+  { name: "Snack", items: 56, img: olma, bg: "bg-[#FFF3FF]" },
+  { name: "Vegetables", items: 72, img: olma, bg: "bg-[#FFF3EB]" },
+  { name: "Strawberry", items: 36, img: olma, bg: "bg-[#F2FCE4]" },
 ];
 
 const scrollLeft = () => {
@@ -27,6 +40,7 @@ const scrollRight = () => {
 
 const Featured_categories = () => {
   const [activeCategory, setActiveCategory] = useState("Pet Foods");
+
   return (
     <div className="mb-4">
       <div className="w-full mt-8 mb-4">
@@ -58,6 +72,7 @@ const Featured_categories = () => {
                     </button>
                   ))}
                 </div>
+
                 <div className="hidden sm:flex items-center space-x-2 absolute top-1/2 -right-2 transform -translate-y-1/2 z-10 bg-white px-1">
                   <button
                     onClick={scrollLeft}
@@ -78,79 +93,23 @@ const Featured_categories = () => {
         </div>
       </div>
 
-      <div>
-        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(120px,1fr))] gap-7">
-          <div className="bg-green-50 rounded-lg flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
+      <div className="grid [grid-template-columns:repeat(auto-fit,minmax(120px,1fr))] gap-7">
+        {featuredItems.map((item, index) => (
+          <div
+            key={index}
+            className={`${item.bg} rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer`}
+          >
             <div className="mb-4">
               <img
-                src="src/assets/Home/olma.png"
-                className="w-28 h-28 object-contain"
-              />
-            </div>
-            <h3 className="text-gray-800 font-medium text-lg">Cake & Milk</h3>
-            <p className="text-gray-500 text-sm">26 items</p>
-          </div>
-          <div className="bg-[#F2FCE4] rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
-            <div className="mb-4">
-              <img
-                src="src/assets/Home/olma.png"
+                src={item.img}
                 className="w-20 h-20 object-contain"
+                alt={item.name}
               />
             </div>
-            <h3 className="text-gray-800 font-medium text-lg">Organic Kiwi</h3>
-            <p className="text-gray-500 text-sm">28 items</p>
+            <h3 className="text-gray-800 font-medium text-lg">{item.name}</h3>
+            <p className="text-gray-500 text-sm">{item.items} items</p>
           </div>
-          <div className="bg-[#FFFCEB] rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
-            <div className="mb-4">
-              <img
-                src="src/assets/Home/olma.png"
-                className="w-20 h-20 object-contain"
-              />
-            </div>
-            <h3 className="text-gray-800 font-medium text-lg">Peach</h3>
-            <p className="text-gray-500 text-sm">14 items</p>
-          </div>
-          <div className="bg-[#ECFFEC] rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
-            <div className="mb-4">
-              <img
-                src="src/assets/Home/olma.png"
-                className="w-20 h-20 object-contain"
-              />
-            </div>
-            <h3 className="text-gray-800 font-medium text-lg">Red Apple</h3>
-            <p className="text-gray-500 text-sm">54 items</p>
-          </div>
-          <div className="bg-[#FFF3FF] rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
-            <div className="mb-4">
-              <img
-                src="src/assets/Home/olma.png"
-                className="w-20 h-20 object-contain"
-              />
-            </div>
-            <h3 className="text-gray-800 font-medium text-lg">Snack</h3>
-            <p className="text-gray-500 text-sm">56 items</p>
-          </div>
-          <div className="bg-[#FFF3EB] rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
-            <div className="mb-4">
-              <img
-                src="src/assets/Home/olma.png"
-                className="w-20 h-20 object-contain"
-              />
-            </div>
-            <h3 className="text-gray-800 font-medium text-lg">Vegetables</h3>
-            <p className="text-gray-500 text-sm">72 items</p>
-          </div>
-          <div className="bg-[#F2FCE4] rounded-lg p-6 flex flex-col items-center justify-center shadow-sm transition-transform hover:scale-105 cursor-pointer">
-            <div className="mb-4">
-              <img
-                src="src/assets/Home/olma.png"
-                className="w-20 h-20 object-contain"
-              />
-            </div>
-            <h3 className="text-gray-800 font-medium text-lg">Strawberry</h3>
-            <p className="text-gray-500 text-sm">36 items</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
