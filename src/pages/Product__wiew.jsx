@@ -65,24 +65,25 @@ export default function ProductView() {
                     <div className="w-[80px] h-[30px] text-center pt-1 font-bold text-sm text-[#F74B81] bg-[#FDE0E9] rounded">Sale Off</div>
                     <h1 className="text-[40px] leading-[48px] font-bold text-[#253D4E]">{product.name}</h1>
 
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <div className="flex items-center gap-2 text-sm text-gray-600 mt-5">
                         <Star className="w-4 h-4 text-yellow-500 fill-yellow-400" />
                         <span className="ml-2 text-[#B6B6B6]">({product.reviews} reviews)</span>
                     </div>
-                    <div className="relative w-fit h-[60px]">
+                    <div className="relative w-fit h-[60px] mt-[30px]">
                         <div className="flex items-center gap-3">
-                            <span className="text-[32px] font-bold text-[#3BB77E] leading-none">
+                            <span className="text-[58px] font-bold text-[#3BB77E] leading-none">
                                 ${product.offerPrice}
                             </span>
-                            <span className="text-[#FDC040] text-[16px] font-semibold leading-none">
+                            <span className="text-[#FDC040] text-[14px] font-semibold leading-none relative top-[-12px]">
                                 26% Off
                             </span>
                         </div>
 
-                        <span className="absolute left-1/2 -translate-x-1/2 top-[38px] text-[#B6B6B6] text-[20px] line-through">
+                        <span className="absolute left-[110px] top-[22px] text-[#B6B6B6] text-[25px] line-through">
                             ${product.price}
                         </span>
                     </div>
+                        <p className="text-[#7E7E7E] text-[17px]">{product.description}</p>
 
 
                     {/* Size */}
