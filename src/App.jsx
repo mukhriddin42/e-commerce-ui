@@ -4,6 +4,8 @@ import { Navigate } from "react-router-dom";
 import Product__wiew from "./pages/Product__wiew";
 import Loader from "./components/Loader/Loader";
 import ProtectedRoute from "./components/ProtectRoute";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
 
 const Layout = lazy(() => import("./components/Layout/Layout"));
 const LayoutAbout = lazy(() => import("./components/LayoutAbout/LayoutAbout"));
@@ -82,6 +84,9 @@ const App = () => {
               <Route path="accountdetails" element={<AccountDetails />} />
               <Route path="logout" element={<Logout />} />
             </Route>
+            {/* Login page */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
