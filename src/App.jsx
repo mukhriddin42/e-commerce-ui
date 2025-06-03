@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import Product__wiew from "./pages/Product__wiew";
 import Loader from "./components/Loader/Loader";
+import ProtectedRoute from "./components/ProtectRoute";
 
 const Layout = lazy(() => import("./components/Layout/Layout"));
 const LayoutAbout = lazy(() => import("./components/LayoutAbout/LayoutAbout"));
@@ -64,7 +65,15 @@ const App = () => {
                 element={<h1>Order Tracking</h1>}
               ></Route>
             </Route>
-            <Route path="account" element={<Account />}>
+            {/* ACCOUNT */}
+            <Route
+              path="account"
+              element={
+                <ProtectedRoute>
+                  <Account />
+                </ProtectedRoute>
+              }
+            >
               <Route index element={<Navigate to="dashboard" replace />} />
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="orders" element={<Orders />} />
