@@ -12,7 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   // Agar URL parametri auth bo‘lsa, avtomatik ma’lumot olish uchun useEffect
   useEffect(() => {
-    if (!auth) return;
+    if (!users) return;
 
     const fetchData = async () => {
       setLoading(true);
