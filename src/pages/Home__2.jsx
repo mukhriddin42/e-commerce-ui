@@ -4,7 +4,6 @@ import DailyBestSells from "../components/Home2/Daily_best_sells.jsx";
 import DealsOfTheDay from "../components/Home2/Deals_of_the_day.jsx";
 import Tabpanel from "../components/Home2/Tabpanel.jsx";
 import TredingProducts from "../components/TrendingProducts/TrendingProducts.jsx";
-import StayHome from "../components/StayHome/StayHome.jsx";
 import Feature_Category from "../components/Home2/Feature_Category.jsx";
 import Featured_categories from "../components/Home2/Featured_categories.jsx";
 
@@ -12,7 +11,7 @@ const Home2 = () => {
   return (
     <div className="container m-auto ">
       <Tabpanel />
-     <Featured_categories/>
+      <Featured_categories />
 
       <Feature_Category />
 
@@ -23,8 +22,6 @@ const Home2 = () => {
       <DealsOfTheDay />
 
       <TredingProducts />
-
-      {/* <StayHome /> */}
     </div>
   );
 };
