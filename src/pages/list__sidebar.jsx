@@ -79,7 +79,7 @@ const ListSidebar = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex w-[1000px] h-[300px] bg-white rounded-xl  overflow-hidden relative p-3 box-border"
+              className="flex w-[1000px] h-[300px] bg-white rounded-xl  overflow-hidden relative p-3 box-border "
             >
               {product.isNew && (
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">

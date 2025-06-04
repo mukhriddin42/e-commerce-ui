@@ -25,11 +25,11 @@ export default function SnackFilter() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {categories.map((category, index) => (
             <button
               key={index}
-              className='w-[135px] h-[46px] bg-white rounded-[30px] text-emerald-500 flex justify-center items-center gap-[8px] text-[17px] leading-[24px] font-semibold'>
+              className='w-[135px] h-[46px] bg-white rounded-[30px] text-emerald-500 flex justify-center items-center gap-[8px] text-[17px] leading-[24px] font-semibold hover:text-[#253D4E] transition duration-400'>
               <X className="w-4 h-4 text-[#B6B6B6]" />
               {category}
             </button>
