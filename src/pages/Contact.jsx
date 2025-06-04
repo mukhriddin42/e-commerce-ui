@@ -37,7 +37,7 @@ export const Contact = () => {
         }
       );
       const data = await res.json();
-      console.log("Jo‘natildi:", data);
+      console.log("Jo‘natildi:");
     } catch (err) {
       console.error("Xatolik:", err);
     }
