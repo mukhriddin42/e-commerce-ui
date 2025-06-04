@@ -9,7 +9,6 @@ export default function DailyBestSells() {
   const [slidesToShow, setSlidesToShow] = useState(4);
 
   useEffect(() => {
-    
     const fetchProducts = async () => {
       try {
         const res = await fetch("https://dummyjson.com/products?limit=12");
@@ -73,7 +72,7 @@ export default function DailyBestSells() {
         <div
           className="w-full lg:w-1/4 rounded-lg overflow-hidden relative min-h-[200px] sm:min-h-[250px] lg:min-h-0"
           style={{
-            backgroundImage: "url('https://via.placeholder.com/400x250')",
+            backgroundImage: "url('src/assets/Home/img.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
