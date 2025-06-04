@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Heart, Share2, Star } from 'lucide-react';
 import { FaCartShopping } from 'react-icons/fa6';
+import { Home } from "lucide-react";
 
 export default function ProductView() {
     const product = {
-        name: 'Seeds of Change Organic Quinoa, Brown',
-        category: 'Vegetables & Tubers',
         price: 52,
         offerPrice: 38,
         rating: 4,
@@ -34,15 +33,27 @@ export default function ProductView() {
     const [size, setSize] = useState(product.selectedSize);
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-10">
-            {/* Breadcrumb */}
-            <div className="text-sm text-gray-500 mb-4">
-                <span className="text-[#3BB77E] font-semibold">Home</span> &gt;{' '}
-                <span className="text-[#3BB77E] font-semibold">{product.category}</span> &gt;{' '}
-                <span className="text-[#7E7E7E] font-semibold">{product.name}</span>
-            </div>
+        <div className="max-w-6xl mx-auto px-4 ">
+<div className="w-ful h-[66px]">
+      <div className="flex items-center space-x-2 text-sm text-gray-500">
+        <div className="flex items-center space-x-1 text-[#3BB77E] font-semibold">
+          <Home size={16} />
+          <span>Home</span>
+        </div>
 
-            <div className="flex flex-col lg:flex-row gap-10">
+        <span className="text-gray-400">›</span>
+
+        <span className="text-[#3BB77E] font-semibold">Vegetables & Tubers</span>
+
+        <span className="text-gray-400">›</span>
+
+        <span className="text-[#7E7E7E] font-medium">
+          Seeds Of Change Organic
+        </span>
+      </div>
+    </div>
+
+            <div className="flex flex-col lg:flex-row gap-10 ">
                 {/* Images */}
                 <div className="flex flex-col gap-5">
                     <div className="rounded-[15px] border-2 border-[#ECECEC] w-[500px] h-[500px] flex items-center justify-center">
@@ -61,7 +72,7 @@ export default function ProductView() {
                     </div>
                 </div>
 
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-4 ">
                     <div className="w-[80px] h-[30px] text-center pt-1 font-bold text-sm text-[#F74B81] bg-[#FDE0E9] rounded">Sale Off</div>
                     <h1 className="text-[40px] leading-[48px] font-bold text-[#253D4E]">{product.name}</h1>
 
@@ -106,7 +117,7 @@ export default function ProductView() {
                     </div>
 
                     {/* Quantity & Buttons */}
-                    <div className="flex gap-3 items-center mt-4 flex-wrap">
+                    <div className="flex gap-3 items-center mt-4 flex-wrap ">
                         <input
                             type="number"
                             value={quantity}
@@ -138,29 +149,48 @@ export default function ProductView() {
 
                 </div>
             </div>
-            <div className="max-w-5xl mx-auto mt-10 p-4">
-                <div className="flex gap-6 border-b border-gray-200 text-[18px] font-medium">
-                    <button className="pb-3 border-b-2 border-[#3BB77E] text-[#3BB77E]">Description</button>
-                    <button className="pb-3 text-gray-500 hover:text-[#3BB77E]">Additional info</button>
-                    <button className="pb-3 text-gray-500 hover:text-[#3BB77E]">Vendor</button>
-                    <button className="pb-3 text-gray-500 hover:text-[#3BB77E]">Reviews (3)</button>
+            <div className="max-w-6xl mx-auto mt-10 border-[#ECECEC] rounded-[15px] border-2  pl-12 pt-12 h-[1320px]">
+                <div className="flex gap-6 text-[17px] leading-[17px]  font-semibold align-middle tracking-normal">
+                    <button className=" w-[143px] h-[45px] rounded-[30px] shadow-md flex items-center justify-center text-[#7E7E7E] hover:text-[#3BB77E] transition-all duration-300">Description</button>
+                    <button className=" w-[143px] h-[45px] rounded-[30px] shadow-md flex items-center justify-center text-[#7E7E7E] hover:text-[#3BB77E] transition-all duration-300">Additional info</button>
+                    <button className=" w-[143px] h-[45px] rounded-[30px] shadow-md flex items-center justify-center text-[#7E7E7E] hover:text-[#3BB77E] transition-all duration-300">Vendor</button>
+                    <button className=" w-[143px] h-[45px] rounded-[30px] shadow-md flex items-center justify-center text-[#7E7E7E] hover:text-[#3BB77E] transition-all duration-300">Reviews (3)</button>
                 </div>
 
-                <div className="mt-6 text-[16px] w-[1020px] text-[#7E7E7E] leading-relaxed">
-                    <p className="mb-4">
+                <div className="mt-6  w-[1030px]">
+                    <p className="mt-10 font-medium text-[16px] leading-[24px] text-[#7E7E7E]" >
                         Uninhibited carnally hired played in whimpered dear gorilla koala depending and much yikes off far quetzal goodness and from for grimaced goodness unaccountably and meadowlark near unblushingly crucial scallop tightly neurotic hungrily some and dear furiously this apart. <br />
                         Spluttered narrowly yikes left moth in yikes bowed this that grizzly much hello on spoon-fed that alas rethought much decently richly and wow against the frequent fluidly at formidable acceptably flapped besides and much circa far over the bucolically hey precarious goldfinch mastodon goodness gnashed a jellyfish and one however because.
                     </p>
 
-                    <ul className="mb-6 list-disc list-inside text-[#7E7E7E]">
-                        <li><strong>Type Of Packing:</strong > Bottle</li>
-                        <li><strong>Color:</strong> Green, Pink, Powder Blue, Purple</li>
-                        <li><strong>Quantity Per Case:</strong> 100ml</li>
-                        <li><strong>Ethyl Alcohol:</strong> 70%</li>
-                        <li><strong>Piece In One:</strong> Carton</li>
-                    </ul>
+                    <div className="mt-7">
+                        <ul className="space-y-4 list-disc list-inside">
+                            <li className="text-[#7E7E7E] font-medium text-[14px] leading-[24px]">
+                                <span>Type Of Packing:</span>
+                                <span className="ml-[90px]">Bottle</span>
+                            </li>
+                            <li className="text-[#7E7E7E] font-medium text-[14px] leading-[24px]">
+                                <span>Color:</span>
+                                <span className="ml-[157px]">Green, Pink, Powder Blue, Purple</span>
+                            </li>
+                            <li className="text-[#7E7E7E] font-medium text-[14px] leading-[24px]">
+                                <span>Quantity Per Case:</span>
+                                <span className="ml-20">100ml</span>
+                            </li>
+                            <li className="text-[#7E7E7E] font-medium text-[14px] leading-[24px]">
+                                <span>Ethyl Alcohol:</span>
+                                <span className="ml-28">70%</span>
+                            </li>
+                            <li className="text-[#7E7E7E] font-medium text-[14px] leading-[24px]">
+                                <span>Piece In One:</span>
+                                <span className="ml-28">Carton</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <p className="mb-6">
+
+
+                    <p className="border-t-2 border-[#ECECEC] pt-6 mt-6 font-medium text-[16px] leading-[24px] text-[#7E7E7E] ">
                         Laconic overheard dear woodchuck wow this outrageously taut beaver hey hello far meadowlark imitatively egregiously hugged that yikes
                         minimally unanimous pouted flirtatiously as beaver beheld above forward energetic across this jeepers beneficently cockily less a the
                         raucously that magic upheld far so the this where crud then below after jeez enchanting drunkenly more much wow callously irrespective
@@ -168,32 +198,33 @@ export default function ProductView() {
                     </p>
 
                     {/* Packaging & Delivery */}
-                    <h2 className="text-[20px] font-semibold text-black mb-2">Packaging & Delivery</h2>
-                    <p className="mb-4">
+                    <h2 className="text-[24px] leading-[28px] font-bold text-[#253D4E] mt-6">Packaging & Delivery</h2>
+                    <p className="mt-3 border-t-2 border-[#ECECEC] pt-4 font-medium text-[16px] leading-[24px] text-[#7E7E7E]">
                         Less lion goodness that euphemistically robin expeditiously bluebird smugly scratched far while thus cackled sheepishly rigid after due one
                         assenting regarding censorious while occasional or this more crane went more as this less much amid overhung anathematic because much
                         held one exuberantly sheep goodness so where rat wry well concomitantly.
                     </p>
-                    <p className="mb-6">
+                    <p className="mt-3 font-medium text-[16px] leading-[24px] text-[#7E7E7E]">
                         Scallop or far crud plain remarkably far by thus far iguana lewd precociously and and less rattlesnake contrary caustic wow this near alas and
-next and pled the yikes articulate about as less cackled dalmatian in much less well jeering for the thanks blindly sentimental whimpered less
-across objectively fanciful grimaced wildly some wow and rose jeepers outgrew lugubrious luridly irrationally attractively dachshund.
+                        next and pled the yikes articulate about as less cackled dalmatian in much less well jeering for the thanks blindly sentimental whimpered less
+                        across objectively fanciful grimaced wildly some wow and rose jeepers outgrew lugubrious luridly irrationally attractively dachshund.
                     </p>
 
                     {/* Suggested Use */}
-                    <h2 className="text-[20px] font-semibold text-black mb-2">Suggested Use</h2>
-                    <p className="mb-6">Refrigeration not necessary.<br />Stir before serving.</p>
+                    <h2 className="text-[24px] leading-[28px] font-bold text-[#253D4E] mt-7">Suggested Use</h2>
+                    <p className="mt-6 text-[14px] leading-[24px] font-medium text-[#7E7E7E]">Refrigeration not necessary.</p>
+                    <p className='mt-3 text-[14px] leading-[24px] font-medium text-[#7E7E7E]'>Stir before serving.</p>
 
                     {/* Other Ingredients */}
-                    <h2 className="text-[20px] font-semibold text-black mb-2">Other Ingredients</h2>
-                    <ul className="list-disc list-inside mb-6">
-                        <li>Organic raw pecans, organic raw cashews.</li>
-                        <li>This butter was produced using a LTG (Low Temperature Grinding) process</li>
-                        <li>Made in machinery that processes tree nuts but does not process peanuts, gluten, dairy or soy</li>
+                    <h2 className="text-[24px] leading-[28px] font-bold text-[#253D4E] mt-6">Other Ingredients</h2>
+                    <ul className=" list-inside mt-6 list-none">
+                        <li className='text-[14px] leading-[24px] font-medium text-[#7E7E7E] mt-3 mb-3'>Organic raw pecans, organic raw cashews.</li>
+                        <li className='text-[14px] leading-[24px] font-medium text-[#7E7E7E]'>This butter was produced using a LTG (Low Temperature Grinding) process</li>
+                        <li className='text-[14px] leading-[24px] font-medium text-[#7E7E7E] mt-3'>Made in machinery that processes tree nuts but does not process peanuts, gluten, dairy or soy</li>
                     </ul>
 
                     {/* Warnings */}
-                    <h2 className="text-[20px] font-semibold text-black mb-2">Warnings</h2>
+                    <h2 className="text-[24px] leading-[28px] font-bold text-[#253D4E] mt-6 mb-9">Warnings</h2>
                     <p>Oil separation occurs naturally. May contain pieces of shell.</p>
                 </div>
             </div>
