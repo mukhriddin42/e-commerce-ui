@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import qulupnay from "src/assets/Home/qulupnay.png";
-import olma from "src/assets/Home/olma.png"; // ✅ Rasmlar import qilindi
+import olma from "src/assets/Home/olma.png";
 import { LuSend } from "react-icons/lu";
 import {
   CakeIcon,
@@ -11,7 +11,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-// Kategoriya tugmalari
 const categories = [
   { name: "Cake & Milk", icon: <CakeIcon className="w-4 h-4 mr-1" /> },
   { name: "Coffee & Teas", icon: <Coffee className="w-4 h-4 mr-1" /> },
@@ -19,7 +18,6 @@ const categories = [
   { name: "Vegetables", icon: <Apple className="w-4 h-4 mr-1" /> },
 ];
 
-// Dinamik mahsulotlar ro'yxati
 const featuredItems = [
   { name: "Cake & Milk", items: 26, img: qulupnay, bg: "bg-green-50" },
   { name: "Organic Kiwi", items: 28, img: olma, bg: "bg-[#F2FCE4]" },
