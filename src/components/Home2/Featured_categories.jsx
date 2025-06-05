@@ -29,7 +29,6 @@ const featuredItems = [
   { name: "Red Apple", items: 54, img: olma, bg: "bg-[#ECFFEC]" },
   { name: "Snack", items: 56, img: olma, bg: "bg-[#FFF3FF]" },
   { name: "Vegetables", items: 72, img: olma, bg: "bg-[#FFF3EB]" },
-  { name: "Strawberry", items: 36, img: olma, bg: "bg-[#F2FCE4]" },
 ];
 
 const FeaturedCategories = () => {

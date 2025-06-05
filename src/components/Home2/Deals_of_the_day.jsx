@@ -14,7 +14,7 @@ export default function ProductCards() {
   }, []);
 
   return (
-    <div className="py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto">
       {/* Header Section */}
       <div className="mb-6 sm:mb-8 lg:mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-[#253D4E] leading-tight">
@@ -28,15 +28,15 @@ export default function ProductCards() {
         </div>
       </div>
 
-      {/* Products Grid */}
-      <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+      {/* Products Grid with Flex */}
+      <div className="flex flex-wrap justify-center gap-x-6 gap-y-20 sm:gap-x-8 sm:gap-y-24 lg:gap-x-10 lg:gap-y-28">
         {products.map((product) => (
           <div
             key={product.id}
-            className="flex flex-col items-center relative pb-12 sm:pb-14 lg:pb-16"
+            className="flex flex-col items-center relative pb-16 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-2rem)] max-w-[274px]"
           >
             {/* Product Image */}
-            <div className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px] aspect-square overflow-hidden rounded-xl border border-gray-200 bg-gradient-to-br from-amber-50 to-orange-50 p-4">
+            <div className="w-full aspect-square overflow-hidden rounded-xl border border-gray-200 bg-gradient-to-br from-amber-50 to-orange-50 p-4">
               <img
                 src={product.thumbnail || "/placeholder.svg"}
                 alt={product.title}
@@ -44,9 +44,9 @@ export default function ProductCards() {
               />
             </div>
 
-            {/* Product Info Card */}
-            <div className="w-[95%] sm:w-[90%] max-w-[300px] lg:max-w-[320px] min-h-[140px] sm:min-h-[145px] rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 absolute bg-white -bottom-8 sm:-bottom-10 flex flex-col justify-center px-4 py-3 sm:py-4">
-              {/* Product Title */}
+            {/* Product Info */}
+            <div className="w-[95%] max-w-[260px] min-h-[145px] rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 absolute bg-white -bottom-10 flex flex-col justify-center px-4 py-4">
+              {/* Title */}
               <h3 className="font-medium text-gray-800 text-sm sm:text-base line-clamp-2 mb-2 leading-tight">
                 {product.title}
               </h3>
@@ -70,7 +70,7 @@ export default function ProductCards() {
                 </span>
               </div>
 
-              {/* Price and Add to Cart */}
+              {/* Price and Add */}
               <div className="flex items-center justify-between w-full">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
                   <span className="text-[#3BB77E] font-semibold text-base sm:text-lg">
@@ -97,14 +97,14 @@ export default function ProductCards() {
 
       {/* Loading State */}
       {products.length === 0 && (
-        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-20 sm:gap-x-8 sm:gap-y-24 lg:gap-x-10 lg:gap-y-28">
           {[...Array(4)].map((_, index) => (
             <div
               key={index}
-              className="flex flex-col items-center relative pb-12 sm:pb-14 lg:pb-16 animate-pulse"
+              className="flex flex-col items-center relative pb-16 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-2rem)] max-w-[274px] animate-pulse"
             >
-              <div className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px] aspect-square rounded-xl bg-gray-200"></div>
-              <div className="w-[95%] sm:w-[90%] max-w-[300px] lg:max-w-[320px] min-h-[140px] sm:min-h-[145px] rounded-2xl border border-gray-200 absolute bg-white -bottom-8 sm:-bottom-10 flex flex-col justify-center px-4 py-3 sm:py-4">
+              <div className="w-full aspect-square rounded-xl bg-gray-200"></div>
+              <div className="w-[95%] max-w-[260px] min-h-[145px] rounded-2xl border border-gray-200 absolute bg-white -bottom-10 flex flex-col justify-center px-4 py-4">
                 <div className="h-4 bg-gray-200 rounded mb-2"></div>
                 <div className="h-3 bg-gray-200 rounded w-3/4 mb-2"></div>
                 <div className="h-3 bg-gray-200 rounded w-1/2 mb-3"></div>
