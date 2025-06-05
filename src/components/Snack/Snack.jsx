@@ -10,16 +10,17 @@ export default function SnackFilter() {
   ];
 
   return (
-    <div className="w-full h-[237px] bg-[#E3F3EA]  pl-28 rounded-2xl flex items-center mb-10 ">
+    <div className="w-full h-[237px] bg-[url(../../assets/img/Main (2).png)]  pl-28 rounded-2xl flex items-center mb-10 ">
       <div className=" justify-between gap-48 flex items-center  ">
         <div className="mb-6 ">
           <h1 className="text-[48px] leading-[57.6px] font-bold text-[#253D4E] mb-2">Snack</h1>
           <div className="text-gray-600 text-sm flex items-center gap-2 cursor-pointer mt-5">
             <span className="text-green-600 flex items-center gap-1 hover:">
-              <Home className="w-4 h-4" />   Home
+              <Home className="w-4 h-4" /> Home
             </span>
             <span>›</span>
-            <span className="opacity-90 font-semibold">Shop</span>
+            <span className="opacity-90 font-semibold">Shop</span>  
+            
             <span>›</span>
             <span className="font-semibold text-gray-600">Snack</span>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+  import React, { useState } from "react";
 import { LuSend } from "react-icons/lu";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -19,7 +19,6 @@ const slides = [
 
 const Tabpanel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
