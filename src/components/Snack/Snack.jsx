@@ -10,7 +10,14 @@ export default function SnackFilter() {
   ];
 
   return (
-    <div className="w-full h-[237px] bg-[url(../../assets/img/Main (2).png)]  pl-28 rounded-2xl flex items-center mb-10 ">
+    <div className="w-full h-[237px] pl-28 rounded-2xl flex items-center mb-10 "
+              style={{
+            backgroundImage: "url('../../assets/img/src/assets/img/Main (2).png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+    >
       <div className=" justify-between gap-48 flex items-center  ">
         <div className="mb-6 ">
           <h1 className="text-[48px] leading-[57.6px] font-bold text-[#253D4E] mb-2">Snack</h1>
