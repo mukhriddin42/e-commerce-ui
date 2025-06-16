@@ -11,28 +11,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Nav = ({ onToggleMenu }) => {
   return (
     <div className="fixed top-0 bg-white w-full z-1000">
-      {/* <div className="flex w-full shadow-sm xl:hidden 2xl:hidden py-5 justify-center">
-        <div className="flex items-center justify-between w-[90%]">
-          <button className="border p-1 rounded">
-            <RxHamburgerMenu className="text-2xl" onClick={onToggleMenu} />
-          </button>
-          <Link to="/">
-            <img src={logo} alt="" />
-          </Link>
-          <ul className="flex gap-2">
-            <li className="cursor-pointer">
-              <Link to="/wishlist">
-                <IoMdHeartEmpty className="text-2xl" />
-              </Link>
-            </li>
-            <li className="cursor-pointer">
-              <Link to="/">
-                <FiShoppingCart className="text-2xl" />
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div> */}
       <nav className="flex  items-center justify-between px-20 gap-3 py-5 border-b border-[#ECECEC]">
         <RxHamburgerMenu
           className="text-2xl hidden md-block"
